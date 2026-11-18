@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom packaging boxes from 250 units | Cartonne</title>
+<meta name="description" content="Custom printed mailer boxes, rigid boxes, mono cartons and paper bags for growing brands. MOQ from 250 units, free structural sample, delivery across India in 12 to 18 days.">
+<meta property="og:title" content="Cartonne · Custom packaging from 250 units">
+<meta property="og:description" content="Printed mailer boxes, rigid boxes, cartons and paper bags with a free sample before you pay.">
+<meta property="og:image" content="assets/hero-mailer-unboxing.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#285247">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23285247'/%3E%3Cpath d='M8 12l8-4 8 4v9l-8 4-8-4z' fill='none' stroke='%23f6f2ec' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M8 12l8 4 8-4M16 16v9' fill='none' stroke='%23f6f2ec' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<link rel="preload" as="image" href="assets/hero-mailer-unboxing.jpg">
+<style>
+:root{
+  --ink:#1d2b26;--forest:#285247;--forest-dark:#1f4038;--clay:#b7754d;--clay-soft:#f1e3d6;
+  --cream:#f6f2ec;--paper:#fffdfa;--sand:#e7ded1;--muted:#5f6660;--line:#e3dbcf;--ok:#2f6b4f;--err:#a3402a;
+  --s25:2px;--s50:4px;--s75:8px;--s100:12px;--s200:16px;--s300:24px;--s400:32px;--s500:40px;--s600:48px;--s700:64px;--s800:80px;--s900:96px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gutter:var(--s400);--max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:700;letter-spacing:-.02em}
+p,li{text-wrap:pretty}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:var(--s200);top:-64px;background:var(--forest);color:#fff;padding:var(--s75) var(--s100);border-radius:8px;z-index:100;transition:transform .3s var(--ease)}
+.skip:focus{transform:translateY(80px)}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--s75);font-size:12px;line-height:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--clay)}
+.muted{color:var(--muted)}
+:is(.ph,.ph-fill,.ph-bold){line-height:1}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s75);border:0;border-radius:9999px;padding:var(--s75) var(--s100);font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .3s var(--ease),transform .5s var(--ease),box-shadow .3s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn-lg{padding:var(--s100) var(--s300)}
+.btn-primary{background:var(--forest);color:#fff}
+.btn-primary:hover{background:var(--forest-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(40,82,71,.25)}
+.btn-primary:active{transform:scale(.98)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-ghost:hover{background:var(--cream)}
+.btn-sm{font-size:14px;line-height:20px;padding:var(--s75) var(--s100)}
+.btn :is(.ph,.ph-fill,.ph-bold){font-size:20px}
+.btn-sm :is(.ph,.ph-fill,.ph-bold){font-size:16px}
+.btn[aria-busy=true]{pointer-events:none;opacity:.8}
+.btn[aria-busy=true] .label{animation:pulse 1.2s var(--ease) infinite}
+@keyframes pulse{50%{opacity:.4}}
+
+/* announcement */
+.announce{background:var(--forest);color:#fff;font-size:14px;line-height:20px;text-align:center;padding:var(--s75) var(--s200)}
+.announce a{color:#fff;font-weight:600;text-underline-offset:3px}
+.announce :is(.ph,.ph-fill,.ph-bold){vertical-align:-2px;margin-right:var(--s50)}
+
+/* header */
+.header{position:sticky;top:var(--s100);z-index:40;margin:var(--s100) auto 0;max-width:calc(var(--max) - var(--s400));width:calc(100% - var(--s400));display:flex;align-items:center;justify-content:space-between;gap:var(--s200);padding:var(--s75) var(--s75) var(--s75) var(--s300);background:rgba(255,253,250,.78);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(227,219,207,.9);border-radius:9999px;transition:box-shadow .3s var(--ease)}
+.header.scrolled{box-shadow:0 8px 32px rgba(29,43,38,.10)}
+.brand{display:flex;align-items:center;gap:var(--s75);text-decoration:none;font-weight:700;font-size:18px;line-height:28px;letter-spacing:.08em}
+.brand svg{width:24px;height:24px}
+.nav{display:flex;gap:var(--s50)}
+.nav a{text-decoration:none;font-size:14px;line-height:20px;font-weight:500;padding:var(--s75) var(--s100);border-radius:9999px;color:var(--muted);transition:background-color .3s var(--ease),color .3s var(--ease)}
+.nav a:hover{color:var(--ink);background:var(--cream)}
+.nav a[aria-current=true]{color:var(--ink);background:var(--cream)}
+.head-actions{display:flex;align-items:center;gap:var(--s75)}
+.call-link{display:inline-flex;align-items:center;gap:var(--s75);text-decoration:none;font-size:14px;line-height:20px;font-weight:600;padding:var(--s75) var(--s100);border-radius:9999px;transition:background-color .3s var(--ease)}
+.call-link:hover{background:var(--cream)}
+.call-link :is(.ph,.ph-fill,.ph-bold){font-size:16px;color:var(--forest)}
+.menu-btn{display:none;width:40px;height:40px;border:0;border-radius:9999px;background:var(--cream);cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:12px;width:16px;height:2px;background:var(--ink);border-radius:2px;transition:transform .5s var(--ease)}
+.menu-btn span:nth-child(1){transform:translateY(-3px)}
+.menu-btn span:nth-child(2){transform:translateY(3px)}
+.menu-open .menu-btn span:nth-child(1){transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:35;background:rgba(255,253,250,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:128px var(--s300) var(--s400);display:flex;flex-direction:column;gap:var(--s75);opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.menu-open .mobile-menu{opacity:1;pointer-events:auto}
+.mobile-menu a{font-size:30px;line-height:36px;font-weight:600;text-decoration:none;padding:var(--s75) 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.menu-open .mobile-menu a{opacity:1;transform:none}
+.mobile-menu .btn{margin-top:var(--s300);font-size:16px;line-height:24px;padding:var(--s100) var(--s300)}
+.mobile-menu .mm-call{font-size:18px;line-height:28px;color:var(--forest)}
+
+/* hero */
+.hero{padding:var(--s700) 0 var(--s800)}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--s700);align-items:center}
+.hero h1{font-size:48px;line-height:1;max-width:680px;margin:var(--s200) 0 var(--s300);background:linear-gradient(90deg,#000 0%,#666 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:var(--s50)}
+.hero .sub{font-size:18px;line-height:28px;color:var(--muted);max-width:680px;margin:0 0 var(--s400)}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s200)}
+.hero-cta .alt{font-size:14px;line-height:20px;color:var(--muted)}
+.hero-cta .alt a{font-weight:600;color:var(--ink);text-underline-offset:3px}
+.checks{list-style:none;padding:0;margin:var(--s300) 0 0;display:flex;flex-wrap:wrap;gap:var(--s75) var(--s300);font-size:14px;line-height:20px;color:var(--muted)}
+.checks li{display:flex;align-items:center;gap:var(--s75)}
+.checks :is(.ph,.ph-fill,.ph-bold){color:var(--forest);font-size:16px}
+.rating{display:flex;align-items:center;gap:var(--s100);margin-top:var(--s400);padding-top:var(--s300);border-top:1px solid var(--line);font-size:14px;line-height:20px}
+.stars{color:var(--clay);display:flex;gap:var(--s25)}
+.avatars{display:flex}
+.avatars span{width:32px;height:32px;border-radius:9999px;display:grid;place-items:center;font-size:12px;line-height:16px;font-weight:700;color:#fff;border:2px solid var(--paper);margin-left:-8px}
+.avatars span:first-child{margin-left:0}
+.hero-media{position:relative}
+.hero-photo{border-radius:24px;overflow:hidden;aspect-ratio:4/4.2;background:var(--sand)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.float-card{position:absolute;background:rgba(255,253,250,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:var(--s100) var(--s200);display:flex;align-items:center;gap:var(--s100);box-shadow:0 16px 40px rgba(29,43,38,.14);font-size:14px;line-height:20px}
+.float-card strong{display:block;font-size:16px;line-height:24px}
+.float-card .ico{width:40px;height:40px;border-radius:9999px;background:var(--clay-soft);color:var(--clay);display:grid;place-items:center;font-size:20px;flex:none}
+.fc-1{left:calc(-1 * var(--s400));bottom:var(--s600)}
+.fc-2{right:var(--s200);top:var(--s200)}
+
+/* logos */
+.logos{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--s300) 0}
+.logos .wrap{display:flex;align-items:center;gap:var(--s400);justify-content:space-between;flex-wrap:wrap}
+.logos p{margin:0;font-size:14px;line-height:20px;color:var(--muted);flex:none}
+.logo-row{display:flex;gap:var(--s500);flex-wrap:wrap;align-items:center;color:#8a8478}
+.logo-row span{font-size:18px;line-height:28px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.logo-row span:nth-child(2n){font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:14px;line-height:20px}
+
+/* sections */
+.section{padding:var(--s900) 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s400);margin-bottom:var(--s500)}
+.section-head h2{font-size:36px;line-height:40px;margin-top:var(--s100);max-width:680px}
+.section-head p{max-width:400px;margin:0;color:var(--muted)}
+.bg-cream{background:var(--cream)}
+
+/* tldr */
+.tldr{padding:var(--s700) 0 0}
+.tldr-card{border:1px solid var(--line);border-radius:24px;padding:var(--s400);display:grid;grid-template-columns:220px 1fr;gap:var(--s400);background:var(--paper)}
+.tldr-card h2{font-size:24px;line-height:32px}
+.tldr-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s300)}
+.tldr-list li{display:flex;flex-direction:column;gap:var(--s50)}
+.tldr-list :is(.ph,.ph-fill,.ph-bold){font-size:24px;color:var(--forest);margin-bottom:var(--s75)}
+.tldr-list strong{font-size:18px;line-height:28px}
+.tldr-list span{font-size:14px;line-height:20px;color:var(--muted)}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s200)}
+.product{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:var(--s75);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.product:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(29,43,38,.10)}
+.product .img{border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:var(--cream)}
+.product img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.product:hover img{transform:scale(1.04)}
+.product .body{padding:var(--s100) var(--s75) var(--s75);display:flex;flex-direction:column;gap:var(--s50);flex:1}
+.product h3{font-size:18px;line-height:28px}
+.product p{margin:0;font-size:14px;line-height:20px;color:var(--muted)}
+.product .price{margin-top:auto;padding-top:var(--s100);font-size:14px;line-height:20px;display:flex;justify-content:space-between;align-items:baseline;gap:var(--s75)}
+.product .price strong{font-size:16px;line-height:24px}
+.product .btn{margin-top:var(--s100);width:100%}
+
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s200)}
+.benefit{background:var(--paper);border-radius:16px;padding:var(--s300);border:1px solid var(--line)}
+.benefit :is(.ph,.ph-fill,.ph-bold){font-size:24px;color:var(--clay);width:48px;height:48px;border-radius:12px;background:var(--clay-soft);display:grid;place-items:center;margin-bottom:var(--s300)}
+.benefit h3{font-size:18px;line-height:28px;margin-bottom:var(--s75)}
+.benefit p{margin:0;font-size:14px;line-height:20px;color:var(--muted)}
+.benefit .proof{display:block;margin-top:var(--s200);padding-top:var(--s200);border-top:1px solid var(--line);font-size:14px;line-height:20px;font-weight:600;color:var(--forest)}
+
+/* tagline */
+.tagline{padding:var(--s900) 0}
+.tagline p{font-size:48px;line-height:1.08;font-weight:600;letter-spacing:-.02em;max-width:880px;margin:0;text-wrap:balance}
+.tagline .w{color:rgba(29,43,38,.28);transition:color .5s var(--ease)}
+.tagline .w.on{color:var(--ink)}
+.tagline .w.accent.on{color:var(--forest)}
+
+/* work */
+.tabs{display:flex;gap:var(--s75);flex-wrap:wrap;margin-bottom:var(--s400)}
+.tab{border:1px solid var(--line);background:var(--paper);border-radius:9999px;padding:var(--s75) var(--s200);font-size:14px;line-height:20px;font-weight:600;color:var(--muted);cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .5s var(--ease)}
+.tab:hover{color:var(--ink);background:var(--cream)}
+.tab:active{transform:scale(.98)}
+.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab .n{opacity:.6;margin-left:var(--s50);font-weight:500}
+.work-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;grid-auto-flow:dense;gap:var(--s200)}
+.work-card{position:relative;border-radius:16px;overflow:hidden;background:var(--sand);margin:0}
+.work-card.tall{grid-row:span 2}
+.work-card.wide{grid-column:span 2}
+.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.work-card:hover img{transform:scale(1.04)}
+.work-card figcaption{position:absolute;left:var(--s100);right:var(--s100);bottom:var(--s100);background:rgba(255,253,250,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:8px;padding:var(--s75) var(--s100);font-size:14px;line-height:20px;display:flex;justify-content:space-between;gap:var(--s75)}
+.work-card figcaption strong{font-weight:600}
+.work-card figcaption span{color:var(--muted)}
+.work-card.is-hidden{display:none}
+.work-card.is-in{animation:cardIn .5s var(--ease) both}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px)}}
+.work-empty{display:none;grid-column:1/-1;border:1px dashed var(--line);border-radius:16px;padding:var(--s600);text-align:center;color:var(--muted)}
+.credit-note{margin:var(--s300) 0 0;font-size:12px;line-height:16px;color:var(--muted)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s200);counter-reset:step;list-style:none;padding:0;margin:0}
+.step{border:1px solid var(--line);border-radius:16px;padding:var(--s300);position:relative;background:var(--paper)}
+.step .num{font-size:14px;line-height:20px;font-weight:700;color:var(--clay);display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--s400)}
+.step .num em{font-style:normal;font-weight:600;color:var(--muted);background:var(--cream);padding:var(--s50) var(--s100);border-radius:9999px}
+.step h3{font-size:20px;line-height:28px;margin-bottom:var(--s75)}
+.step p{margin:0;font-size:14px;line-height:20px;color:var(--muted)}
+.steps-cta{display:flex;align-items:center;gap:var(--s200);margin-top:var(--s400);flex-wrap:wrap}
+
+/* proof */
+.proof-band{background:var(--forest);color:#fff;padding:var(--s900) 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s300);padding-bottom:var(--s700);margin-bottom:var(--s700);border-bottom:1px solid rgba(255,255,255,.16)}
+.stat strong{display:block;font-size:48px;line-height:1;font-weight:600;letter-spacing:-.02em;margin-bottom:var(--s100)}
+.stat span{font-size:14px;line-height:20px;color:#cddad5}
+.proof-band .eyebrow{color:#e2c3a5}
+.proof-band h2{font-size:36px;line-height:40px;margin:var(--s100) 0 var(--s500);max-width:680px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s200)}
+.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:var(--s300);display:flex;flex-direction:column;gap:var(--s300);margin:0}
+.quote blockquote{margin:0;font-size:16px;line-height:24px}
+.quote .stars{color:#e2c3a5}
+.quote figcaption{margin-top:auto;display:flex;align-items:center;gap:var(--s100);font-size:14px;line-height:20px}
+.quote figcaption .av{width:40px;height:40px;border-radius:9999px;display:grid;place-items:center;font-weight:700;background:#e2c3a5;color:var(--forest-dark);flex:none}
+.quote figcaption span{display:block;color:#cddad5}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s700);align-items:start}
+.faq-side h2{font-size:36px;line-height:40px;margin:var(--s100) 0 var(--s200)}
+.faq-side p{color:var(--muted);margin:0 0 var(--s300)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:var(--s200);padding:var(--s300) 0;font-size:18px;line-height:28px;font-weight:600;border-radius:8px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary :is(.ph,.ph-fill,.ph-bold){font-size:20px;flex:none;transition:transform .5s var(--ease);color:var(--forest)}
+.faq-list details[open] summary :is(.ph,.ph-fill,.ph-bold){transform:rotate(45deg)}
+.faq-list details p{margin:0 0 var(--s300);color:var(--muted);max-width:640px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s700);align-items:start}
+.contact h2{font-size:48px;line-height:1;margin:var(--s100) 0 var(--s300)}
+.contact .lead{font-size:18px;line-height:28px;color:var(--muted);margin:0 0 var(--s400)}
+.promise{display:flex;gap:var(--s200);padding:var(--s300);border-radius:16px;background:var(--paper);border:1px solid var(--line);margin-bottom:var(--s300)}
+.promise :is(.ph,.ph-fill,.ph-bold){font-size:24px;color:var(--forest);flex:none}
+.promise strong{display:block;margin-bottom:var(--s50)}
+.promise p{margin:0;font-size:14px;line-height:20px;color:var(--muted)}
+.direct{display:grid;grid-template-columns:1fr 1fr;gap:var(--s100)}
+.direct a{display:flex;align-items:center;gap:var(--s100);padding:var(--s200);border-radius:16px;border:1px solid var(--line);text-decoration:none;background:var(--paper);transition:transform .5s var(--ease),background-color .3s var(--ease)}
+.direct a:hover{transform:translateY(-2px);background:#fff}
+.direct :is(.ph,.ph-fill,.ph-bold){font-size:24px;color:var(--forest)}
+.direct small{display:block;font-size:12px;line-height:16px;color:var(--muted)}
+.direct strong{font-size:14px;line-height:20px}
+.contact-photo{margin-top:var(--s300);border-radius:16px;overflow:hidden;aspect-ratio:16/10}
+.contact-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+
+/* forms */
+.form-card{background:var(--paper);border-radius:24px;padding:var(--s400);border:1px solid var(--line);box-shadow:0 24px 64px rgba(29,43,38,.08)}
+.form-card h3{font-size:24px;line-height:32px;margin-bottom:var(--s50)}
+.form-card .form-sub{margin:0 0 var(--s300);font-size:14px;line-height:20px;color:var(--muted)}
+.progress{display:flex;align-items:center;gap:var(--s75);font-size:12px;line-height:16px;color:var(--muted);margin-bottom:var(--s300)}
+.progress .bar{flex:1;height:4px;border-radius:9999px;background:var(--cream);overflow:hidden}
+.progress .bar i{display:block;height:100%;width:100%;background:var(--forest);transform-origin:left;transform:scaleX(0);transition:transform .5s var(--ease)}
+.field{margin-bottom:var(--s200)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s200)}
+label,.legend{display:block;font-size:14px;line-height:20px;font-weight:600;margin-bottom:var(--s75)}
+label .opt{font-weight:500;color:var(--muted)}
+.input{width:100%;padding:var(--s100) var(--s200);border:1px solid #d6cdc0;border-radius:12px;background:#fff;font-size:16px;line-height:24px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.input:hover{border-color:#bfb4a5}
+.input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(40,82,71,.15)}
+textarea.input{min-height:96px;resize:vertical}
+select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 256 256'%3E%3Cpath d='M213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32z' fill='%235f6660'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:var(--s500)}
+.phone-wrap{display:flex}
+.phone-wrap .cc{display:flex;align-items:center;padding:0 var(--s100);border:1px solid #d6cdc0;border-right:0;border-radius:12px 0 0 12px;background:var(--cream);font-size:14px;line-height:20px;color:var(--muted)}
+.phone-wrap .input{border-radius:0 12px 12px 0}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s75);border:0;padding:0;margin:0}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;gap:var(--s50);padding:var(--s75) var(--s100);border-radius:9999px;border:1px solid #d6cdc0;font-size:14px;line-height:20px;font-weight:500;cursor:pointer;background:#fff;transition:background-color .3s var(--ease),border-color .3s var(--ease),transform .5s var(--ease)}
+.chip span:hover{border-color:var(--forest)}
+.chip span:active{transform:scale(.98)}
+.chip input:checked+span{background:var(--forest);border-color:var(--forest);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--clay);outline-offset:2px}
+.err{display:none;margin-top:var(--s50);font-size:14px;line-height:20px;color:var(--err)}
+.field.invalid .input{border-color:var(--err)}
+.field.invalid .err{display:flex;gap:var(--s50);align-items:center}
+.submit{width:100%;padding:var(--s100) var(--s300)}
+.assure{display:flex;justify-content:center;flex-wrap:wrap;gap:var(--s75) var(--s200);margin:var(--s200) 0 0;font-size:12px;line-height:16px;color:var(--muted)}
+.assure span{display:inline-flex;align-items:center;gap:var(--s50)}
+.success{display:none;text-align:center;padding:var(--s400) var(--s200)}
+.success :is(.ph,.ph-fill,.ph-bold){font-size:48px;color:var(--ok);margin-bottom:var(--s200)}
+.success h3{margin-bottom:var(--s75)}
+.success p{color:var(--muted);margin:0 0 var(--s300)}
+.form-done form{display:none}
+.form-done .success{display:block;animation:cardIn .5s var(--ease) both}
+
+/* drawer */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(29,43,38,.45);z-index:60;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.drawer{position:fixed;top:var(--s100);right:var(--s100);bottom:var(--s100);width:min(480px,calc(100% - 24px));z-index:61;background:var(--paper);border-radius:24px;overflow:auto;transform:translateX(calc(100% + 24px));transition:transform .5s var(--ease);box-shadow:0 24px 80px rgba(0,0,0,.2)}
+.drawer .form-card{border:0;box-shadow:none;border-radius:0}
+.drawer-open .drawer{transform:none}
+.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
+.drawer-close{position:absolute;top:var(--s200);right:var(--s200);width:40px;height:40px;border-radius:9999px;border:0;background:var(--cream);cursor:pointer;display:grid;place-items:center;font-size:20px;transition:background-color .3s var(--ease),transform .5s var(--ease)}
+.drawer-close:hover{background:var(--sand)}
+.drawer-close:active{transform:scale(.96)}
+.drawer .call-alt{display:flex;align-items:center;gap:var(--s100);margin-top:var(--s300);padding-top:var(--s300);border-top:1px solid var(--line);font-size:14px;line-height:20px;color:var(--muted)}
+.drawer .call-alt a{font-weight:600;color:var(--forest)}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* footer */
+.footer{background:var(--ink);color:#c9cfcb;padding:var(--s700) 0 var(--s400);font-size:14px;line-height:20px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--s400);padding-bottom:var(--s500);border-bottom:1px solid rgba(255,255,255,.12)}
+.footer .brand{color:#fff;margin-bottom:var(--s200)}
+.footer h4{margin:0 0 var(--s200);font-size:14px;line-height:20px;color:#fff;font-weight:600}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--s75)}
+.footer a{text-decoration:none;transition:color .3s var(--ease)}
+.footer a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:var(--s200);flex-wrap:wrap;padding-top:var(--s300);font-size:12px;line-height:16px;color:#8f9993}
+.footer-bottom nav{display:flex;gap:var(--s200)}
+
+.dots{display:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:var(--s300);z-index:80;background:var(--ink);color:#fff;padding:var(--s100) var(--s200);border-radius:12px;font-size:14px;line-height:20px;display:flex;gap:var(--s75);align-items:center;opacity:0;transform:translate(-50%,16px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-property:opacity,color,background-color!important}
+  .reveal{transform:none}
+  .mobile-menu a{transform:none}
+}
+
+/* responsive */
+@media (max-width:1100px){
+  .products{grid-template-columns:repeat(3,1fr)}
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .nav{display:none}
+  .menu-btn{display:block}
+  .fc-1{left:var(--s200)}
+}
+@media (max-width:860px){
+  :root{--gutter:var(--s300)}
+  .hero{padding:var(--s500) 0 var(--s700)}
+  .hero-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:var(--s500)}
+  .hero h1{font-size:48px}
+  .tldr-card{grid-template-columns:1fr;gap:var(--s300)}
+  .tldr-list{grid-template-columns:repeat(2,1fr)}
+  .section{padding:var(--s800) 0}
+  .section-head{flex-direction:column;align-items:flex-start;gap:var(--s200)}
+  .work-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .steps,.quotes{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr);gap:var(--s400) var(--s300)}
+  .tagline p{font-size:36px;line-height:40px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .call-link .num{display:none}
+}
+@media (max-width:640px){
+  :root{--gutter:var(--s200)}
+  html{scroll-padding-top:80px}
+  .announce{font-size:12px;line-height:16px}
+  .header{top:var(--s75);margin-top:var(--s75);width:calc(100% - var(--s200));padding-left:var(--s200)}
+  .head-actions .btn-primary{display:none}
+  .hero h1{font-size:36px;line-height:40px}
+  .hero h1 br{display:none}
+  .hero .sub{font-size:16px;line-height:24px}
+  .hero-cta .btn{width:100%}
+  .hero-photo{aspect-ratio:4/3.4;border-radius:16px}
+  .fc-2{display:none}
+  .fc-1{left:var(--s100);bottom:var(--s100)}
+  .tldr-card{padding:var(--s300)}
+  .tldr-list{grid-template-columns:1fr 1fr;gap:var(--s200)}
+  .products{grid-template-columns:1fr;gap:var(--s200)}
+  .product .img{aspect-ratio:4/3}
+  .benefits{grid-template-columns:1fr}
+  .section-head h2,.faq-side h2,.proof-band h2{font-size:30px;line-height:36px}
+  .contact h2{font-size:36px;line-height:40px}
+  .tagline p{font-size:30px;line-height:36px}
+  .work-grid{grid-auto-rows:160px;gap:var(--s100)}
+  .work-card figcaption span{display:none}
+  .stat strong{font-size:36px}
+  .row2,.direct{grid-template-columns:1fr}
+  .form-card{padding:var(--s300)}
+  .logo-row{gap:var(--s200) var(--s300)}
+  .footer-grid{grid-template-columns:1fr}
+  .mbar{position:fixed;left:var(--s75);right:var(--s75);bottom:var(--s75);z-index:50;display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s75);padding:var(--s75);border-radius:9999px;background:rgba(255,253,250,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 8px 32px rgba(29,43,38,.16);transform:translateY(calc(100% + 16px));transition:transform .5s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar .btn{padding:var(--s100)}
+  body{padding-bottom:var(--s700)}
+  /* swipe carousels */
+  .swipe{display:flex;gap:var(--s100);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(-1 * var(--gutter));padding:0 var(--gutter) var(--s25);scroll-padding:0 var(--gutter)}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe>*{flex:0 0 82%;scroll-snap-align:start}
+  .work-grid.swipe{grid-auto-rows:auto}
+  .work-grid.swipe .work-card,.work-grid.swipe .work-card.tall,.work-grid.swipe .work-card.wide{height:400px;grid-row:auto;grid-column:auto}
+  .work-grid.swipe .work-card.is-hidden{display:none}
+  .work-grid.swipe .work-empty{flex-basis:100%}
+  .work-grid.swipe .work-card figcaption span{display:inline}
+  .dots{display:flex;justify-content:center;gap:var(--s75);margin-top:var(--s200)}
+  .dots button{width:8px;height:8px;padding:0;border:0;border-radius:9999px;background:var(--line);cursor:pointer;transition:background-color .3s var(--ease),transform .5s var(--ease)}
+  .dots button[aria-current=true]{background:var(--forest);transform:scale(1.25)}
+  .dots button:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is your minimum order quantity?","acceptedAnswer":{"@type":"Answer","text":"250 units for mailer boxes, mono cartons and paper bags. 300 units for rigid boxes. You can split the run across two artwork versions at no extra cost."}},
+{"@type":"Question","name":"How long does production take?","acceptedAnswer":{"@type":"Answer","text":"12 to 18 working days after you approve the final proof, plus 2 to 5 days for delivery depending on your city."}},
+{"@type":"Question","name":"Can I see a sample before I order?","acceptedAnswer":{"@type":"Answer","text":"Yes. We send a free unprinted structural sample in your exact size within 5 working days, plus a 3D digital proof of your artwork."}},
+{"@type":"Question","name":"Do you help with design and dielines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide the dieline for free. Our in house designer can also adapt your artwork for print, starting at ₹2,450 per design."}},
+{"@type":"Question","name":"Are your materials recyclable?","acceptedAnswer":{"@type":"Answer","text":"Our kraft and duplex boards are FSC certified and fully recyclable. We print with water based inks and can skip plastic lamination entirely."}},
+{"@type":"Question","name":"Do you deliver across India?","acceptedAnswer":{"@type":"Answer","text":"Yes. We ship to every pin code in India and can split delivery between your warehouse and fulfilment partner."}}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce"><i class="ph ph-gift"></i>Free structural sample with every quote this month. <a href="#quote" data-open-quote>Claim yours</a></div>
+
+<header class="header" id="header">
+  <a class="brand" href="#top" aria-label="Cartonne home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#285247"/><path d="M8 12l8-4 8 4v9l-8 4-8-4z M8 12l8 4 8-4M16 16v9" fill="none" stroke="#f6f2ec" stroke-width="2" stroke-linejoin="round"/></svg>
+    CARTONNE
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#products">Packaging</a>
+    <a href="#work">Work</a>
+    <a href="#process">How it works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="head-actions">
+    <a class="call-link" href="tel:+918047182290" aria-label="Call Cartonne on +91 80 4718 2290"><i class="ph-fill ph-phone"></i><span class="num">+91 80 4718 2290</span></a>
+    <button class="btn btn-primary btn-sm" data-open-quote>Get a free quote <i class="ph ph-arrow-right"></i></button>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#products">Packaging</a>
+  <a href="#work">Work</a>
+  <a href="#process">How it works</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a class="mm-call" href="tel:+918047182290"><i class="ph-fill ph-phone"></i> +91 80 4718 2290</a>
+  <button class="btn btn-primary" data-open-quote>Get a free quote <i class="ph ph-arrow-right"></i></button>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i class="ph-fill ph-package"></i> Custom packaging from 250 units</span>
+      <h1 id="hero-title">Custom boxes that sell <br>your product before <br>it is even opened.</h1>
+      <p class="sub">Printed mailer boxes, rigid boxes, cartons and paper bags for growing brands. Approve a free sample first, then get delivery anywhere in India in 12 to 18 days.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" data-open-quote>Get my free quote <i class="ph ph-arrow-right"></i></button>
+        <span class="alt">or call <a href="tel:+918047182290">+91 80 4718 2290</a></span>
+      </div>
+      <ul class="checks">
+        <li><i class="ph-bold ph-check"></i>Price within 4 working hours</li>
+        <li><i class="ph-bold ph-check"></i>Free dieline and sample</li>
+        <li><i class="ph-bold ph-check"></i>No payment until you approve</li>
+      </ul>
+      <div class="rating">
+        <div class="avatars" aria-hidden="true"><span style="background:#285247">RM</span><span style="background:#b7754d">AN</span><span style="background:#6b7f5a">FS</span><span style="background:#4a5d78">KV</span></div>
+        <div>
+          <div class="stars" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+          <strong>4.8 out of 5</strong> <span class="muted">from 212 Google reviews</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-photo"><img src="assets/hero-mailer-unboxing.jpg" alt="Hands opening a plain kraft mailer box on a warm beige surface" width="1600" height="1067" fetchpriority="high"></div>
+      <div class="float-card fc-1"><span class="ico"><i class="ph-fill ph-seal-check"></i></span><div><strong>Sample approved</strong>Saanjh Skincare · 5 days</div></div>
+      <div class="float-card fc-2"><span class="ico"><i class="ph-fill ph-truck"></i></span><div><strong>2,400 mailers</strong>Shipped to Pune</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos" aria-label="Brands that use Cartonne">
+  <div class="wrap">
+    <p>Packaging 387 brands across India, including</p>
+    <div class="logo-row" aria-hidden="true"><span>Kaapi Kulture</span><span>Saanjh</span><span>Mitti &amp; Co.</span><span>Noor Candles</span><span>Ghar Pantry</span></div>
+  </div>
+</section>
+
+<!-- TLDR -->
+<section class="tldr" aria-labelledby="tldr-title">
+  <div class="wrap">
+    <div class="tldr-card reveal">
+      <div><h2 id="tldr-title">Cartonne in 20 seconds</h2></div>
+      <ul class="tldr-list">
+        <li><i class="ph ph-stack"></i><strong>From 250 units</strong><span>Low minimums so you can test a new box without overstocking.</span></li>
+        <li><i class="ph ph-currency-inr"></i><strong>From ₹6.85 a box</strong><span>Clear unit pricing. No setup fee on repeat orders.</span></li>
+        <li><i class="ph ph-cube"></i><strong>Free sample first</strong><span>Hold your exact size before you pay a rupee.</span></li>
+        <li><i class="ph ph-truck"></i><strong>12 to 18 days</strong><span>Production plus delivery to any pin code in India.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products" aria-labelledby="products-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Find your format</span><h2 id="products-title">Pick a format. We will size it to your product.</h2></div>
+      <p>Every format is made to your exact dimensions and printed with your artwork. Prices shown are for 1,000 units.</p>
+    </div>
+    <div class="products">
+      <article class="product reveal">
+        <div class="img"><img src="assets/mailer-stack.jpg" alt="Stack of printed kraft mailer boxes" loading="lazy"></div>
+        <div class="body"><h3>Mailer boxes</h3><p>Self locking boxes for ecommerce and subscription kits.</p>
+          <div class="price"><span class="muted">from</span><strong>₹18.40 / unit</strong></div>
+          <button class="btn btn-ghost btn-sm" data-open-quote data-type="Mailer box">Get mailer price</button></div>
+      </article>
+      <article class="product reveal">
+        <div class="img"><img src="assets/rigid-boxes.jpg" alt="Three lidded rigid kraft boxes held in one hand" loading="lazy"></div>
+        <div class="body"><h3>Rigid boxes</h3><p>Two piece gift boxes with a weighty, premium feel.</p>
+          <div class="price"><span class="muted">from</span><strong>₹64.50 / unit</strong></div>
+          <button class="btn btn-ghost btn-sm" data-open-quote data-type="Rigid box">Get rigid box price</button></div>
+      </article>
+      <article class="product reveal">
+        <div class="img"><img src="assets/coffee-carton.jpg" alt="Folding carton of coffee packs styled with flowers" loading="lazy"></div>
+        <div class="body"><h3>Mono cartons</h3><p>Folding cartons for skincare, food and retail shelves.</p>
+          <div class="price"><span class="muted">from</span><strong>₹6.85 / unit</strong></div>
+          <button class="btn btn-ghost btn-sm" data-open-quote data-type="Mono carton">Get carton price</button></div>
+      </article>
+      <article class="product reveal">
+        <div class="img"><img src="assets/paper-bag.jpg" alt="Kraft paper shopping bag with tissue paper" loading="lazy"></div>
+        <div class="body"><h3>Paper bags</h3><p>Twisted handle carry bags in kraft or white board.</p>
+          <div class="price"><span class="muted">from</span><strong>₹11.20 / unit</strong></div>
+          <button class="btn btn-ghost btn-sm" data-open-quote data-type="Paper bag">Get bag price</button></div>
+      </article>
+      <article class="product reveal">
+        <div class="img"><img src="assets/gift-box-tubes.jpg" alt="Gift box holding two kraft paper tubes" loading="lazy"></div>
+        <div class="body"><h3>Custom builds</h3><p>Tubes, inserts, sleeves and kits designed around you.</p>
+          <div class="price"><span class="muted">pricing</span><strong>Quoted per brief</strong></div>
+          <button class="btn btn-ghost btn-sm" data-open-quote data-type="Not sure yet">Describe my idea</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section bg-cream" aria-labelledby="benefits-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Why brands switch to Cartonne</span><h2 id="benefits-title">Less back and forth.<br>Better boxes on time.</h2></div>
+      <p>Most packaging delays come from unclear quotes and surprise reprints. We built the process to remove both.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal"><i class="ph ph-clock-countdown"></i><h3>A real price in hours</h3><p>Send your size and quantity, get an itemised quote the same working day.</p><span class="proof">Median reply time: 3 h 12 m</span></div>
+      <div class="benefit reveal"><i class="ph ph-ruler"></i><h3>Sized to your product</h3><p>We build the dieline around your item so it does not rattle or need extra filler.</p><span class="proof">Cuts void fill by up to 40%</span></div>
+      <div class="benefit reveal"><i class="ph ph-palette"></i><h3>Colour you approved</h3><p>Every job is matched against a signed proof. If print drifts, we reprint at our cost.</p><span class="proof">0.7% reprint rate in 2026</span></div>
+      <div class="benefit reveal"><i class="ph ph-leaf"></i><h3>Recyclable by default</h3><p>FSC certified board, water based inks and no plastic lamination unless you ask.</p><span class="proof">100% kerbside recyclable</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINE REVEAL -->
+<section class="tagline" aria-label="Our promise">
+  <div class="wrap">
+    <p id="tagline">Your box is the first thing a customer holds. <span class="accent-group">We make sure it feels like your brand.</span></p>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section bg-cream" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Packaging in the wild</span><h2 id="work-title">Ideas for your next box</h2></div>
+      <p>Filter by category to see formats, finishes and board choices that suit your product.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Filter work by category">
+      <button class="tab" role="tab" aria-selected="true" data-filter="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="beauty">Beauty</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="food">Food</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="ecommerce">Ecommerce</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="gifting">Gifting</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="retail">Retail</button>
+    </div>
+    <div class="work-grid swipe" id="work-grid" aria-label="Project gallery, swipe for more">
+      <figure class="work-card tall" data-cat="beauty gifting"><img src="assets/kraft-tubes.jpg" alt="Kraft paper tubes with illustrated round labels" loading="lazy"><figcaption><strong>Kraft tubes</strong><span>Beauty</span></figcaption></figure>
+      <figure class="work-card wide" data-cat="ecommerce"><img src="assets/corrugated-shipping.jpg" alt="Corrugated shipping boxes with twine and kraft wrapping" loading="lazy"><figcaption><strong>Corrugated shippers</strong><span>Ecommerce</span></figcaption></figure>
+      <figure class="work-card" data-cat="food gifting"><img src="assets/coffee-carton.jpg" alt="Coffee gift carton with flowers" loading="lazy"><figcaption><strong>Coffee gift carton</strong><span>Food</span></figcaption></figure>
+      <figure class="work-card tall" data-cat="gifting"><img src="assets/rigid-stack-tag.jpg" alt="Stack of rigid kraft boxes with a thank you tag" loading="lazy"><figcaption><strong>Rigid gift stack</strong><span>Gifting</span></figcaption></figure>
+      <figure class="work-card" data-cat="retail"><img src="assets/paper-bag.jpg" alt="Kraft carry bag with tissue" loading="lazy"><figcaption><strong>Carry bag</strong><span>Retail</span></figcaption></figure>
+      <figure class="work-card" data-cat="ecommerce retail"><img src="assets/pouch-box.jpg" alt="Small kraft box holding a linen pouch" loading="lazy"><figcaption><strong>Jewellery box</strong><span>Retail</span></figcaption></figure>
+      <figure class="work-card" data-cat="beauty"><img src="assets/gift-box-tubes.jpg" alt="Gift box with two kraft tubes and wrapped soaps" loading="lazy"><figcaption><strong>Ritual kit</strong><span>Beauty</span></figcaption></figure>
+      <figure class="work-card" data-cat="ecommerce gifting"><img src="assets/thank-you-tags.jpg" alt="Hand stamping thank you tags next to kraft boxes" loading="lazy"><figcaption><strong>Branded tags and inserts</strong><span>Ecommerce</span></figcaption></figure>
+      <figure class="work-card" data-cat="gifting food"><img src="assets/gift-boxes-flowers.jpg" alt="Three kraft gift boxes on a glass table with flowers" loading="lazy"><figcaption><strong>Hamper boxes</strong><span>Gifting</span></figcaption></figure>
+      <div class="work-empty" id="work-empty">No projects in this category yet. <a href="#quote" data-open-quote>Tell us about yours</a> and we will send ideas.</div>
+    </div>
+    <p class="credit-note">Photography is illustrative stock imagery for this concept and does not show Cartonne client work.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">How it works</span><h2 id="process-title">From brief to delivered boxes in three steps</h2></div>
+      <p>You only pay once you have held the sample and approved the proof.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><div class="num">01 <em>2 minutes</em></div><h3>Tell us what you are packing</h3><p>Share the product size, quantity and a photo if you have one. We reply with a price and a recommended format.</p></li>
+      <li class="step reveal"><div class="num">02 <em>5 working days</em></div><h3>Hold a free sample</h3><p>We courier an unprinted sample in your exact size plus a 3D proof of your artwork. Tweak it until it is right.</p></li>
+      <li class="step reveal"><div class="num">03 <em>12 to 18 days</em></div><h3>Approve and we produce</h3><p>Pay 50% to start. We print, quality check every batch and deliver to your warehouse or fulfilment partner.</p></li>
+    </ol>
+    <div class="steps-cta reveal">
+      <button class="btn btn-primary btn-lg" data-open-quote>Start with a free quote <i class="ph ph-arrow-right"></i></button>
+      <span class="muted">Takes about 2 minutes. No payment needed.</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-band" id="reviews" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><strong>387</strong><span>brands packed since 2019</span></div>
+      <div class="stat"><strong>98.6%</strong><span>orders delivered on or before the promised date</span></div>
+      <div class="stat"><strong>3.2 m</strong><span>boxes printed in the last 12 months</span></div>
+      <div class="stat"><strong>4.8 / 5</strong><span>average rating across 212 reviews</span></div>
+    </div>
+    <span class="eyebrow">What founders say</span>
+    <h2 id="reviews-title">Brands stay because the boxes show up right</h2>
+    <div class="quotes">
+      <figure class="quote reveal">
+        <div class="stars" aria-label="5 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <blockquote>We moved our serum cartons to Cartonne after two reprints elsewhere. The sample arrived in four days and the colour matched our proof exactly.</blockquote>
+        <figcaption><span class="av">RM</span><div><strong>Ritika Malhotra</strong><span>Founder, Saanjh Skincare</span></div></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars" aria-label="5 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <blockquote>Our new mailer is 22 mm shorter, so we pay a lower courier slab on every order. That alone covered the cost of the boxes in six weeks.</blockquote>
+        <figcaption><span class="av">AN</span><div><strong>Arjun Nair</strong><span>Operations lead, Kaapi Kulture</span></div></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars" aria-label="5 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <blockquote>I ordered 300 rigid boxes for Diwali hampers with ten days to spare. They arrived early and customers keep posting the unboxing.</blockquote>
+        <figcaption><span class="av">FS</span><div><strong>Farah Sheikh</strong><span>Owner, Noor Candles</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-title">Before you ask for a quote</h2>
+      <p>Still unsure? A packaging specialist can answer on the phone in under five minutes.</p>
+      <a class="btn btn-ghost" href="tel:+918047182290"><i class="ph ph-phone"></i> Call +91 80 4718 2290</a>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary>What is your minimum order quantity?<i class="ph ph-plus"></i></summary><p>250 units for mailer boxes, mono cartons and paper bags. 300 units for rigid boxes. You can split the run across two artwork versions at no extra cost.</p></details>
+      <details><summary>How long does production take?<i class="ph ph-plus"></i></summary><p>12 to 18 working days after you approve the final proof, plus 2 to 5 days for delivery depending on your city. Rush slots of 8 days are available most months.</p></details>
+      <details><summary>Can I see a sample before I order?<i class="ph ph-plus"></i></summary><p>Yes. We send a free unprinted structural sample in your exact size within 5 working days, plus a 3D digital proof of your artwork.</p></details>
+      <details><summary>Do you help with design and dielines?<i class="ph ph-plus"></i></summary><p>Yes. The dieline is free. Our in house designer can also adapt your artwork for print, starting at ₹2,450 per design.</p></details>
+      <details><summary>What if the print does not match my proof?<i class="ph ph-plus"></i></summary><p>We reprint the affected boxes at our cost. Every job is checked against your signed proof before it leaves the plant.</p></details>
+      <details><summary>Are your materials recyclable?<i class="ph ph-plus"></i></summary><p>Our kraft and duplex boards are FSC certified and fully recyclable. We print with water based inks and can skip plastic lamination entirely.</p></details>
+      <details><summary>How do payments work?<i class="ph ph-plus"></i></summary><p>The quote and sample are free. Once you approve the proof, you pay 50% to start production and the balance before dispatch. We accept UPI, NEFT and cards, and issue GST invoices.</p></details>
+      <details><summary>Do you deliver across India?<i class="ph ph-plus"></i></summary><p>Yes. We ship to every pin code in India and can split delivery between your warehouse and fulfilment partner.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FINAL CTA -->
+<section class="section bg-cream contact" id="quote" aria-labelledby="quote-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Free quote · No obligation</span>
+      <h2 id="quote-title">Get your packaging price today</h2>
+      <p class="lead">Tell us what you are packing. A specialist replies with a price, a recommended format and a sample date within 4 working hours.</p>
+      <div class="promise"><i class="ph-fill ph-shield-check"></i><div><strong>Our print promise</strong><p>Free sample before you pay. If the final print does not match your approved proof, we reprint at our cost.</p></div></div>
+      <div class="direct">
+        <a href="tel:+918047182290"><i class="ph ph-phone"></i><div><small>Call · Mon to Sat, 9 to 7</small><strong>+91 80 4718 2290</strong></div></a>
+        <a href="mailto:hello@cartonne.in?subject=Packaging%20enquiry"><i class="ph ph-envelope-simple"></i><div><small>Email</small><strong>hello@cartonne.in</strong></div></a>
+      </div>
+      <div class="contact-photo"><img src="assets/rigid-stack-tag.jpg" alt="Stacked rigid kraft boxes with a thank you tag" loading="lazy"></div>
+    </div>
+    <div class="form-card reveal" id="main-form-card">
+      <h3>Request a free quote</h3>
+      <p class="form-sub">Fields marked optional can be skipped.</p>
+      <div class="progress" aria-hidden="true"><div class="bar"><i></i></div><span class="pct">0% complete</span></div>
+      <form class="lead-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="m-name">Your name</label><input class="input" id="m-name" name="name" autocomplete="name" placeholder="Priya Sharma" required><div class="err"><i class="ph ph-warning-circle"></i>Enter your name so we know who to ask for.</div></div>
+          <div class="field"><label for="m-biz">Brand <span class="opt">(optional)</span></label><input class="input" id="m-biz" name="business" autocomplete="organization" placeholder="Brand or company"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="m-phone">Phone or WhatsApp</label><div class="phone-wrap"><span class="cc">+91</span><input class="input" id="m-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="98765 43210" required data-type="phone"></div><div class="err"><i class="ph ph-warning-circle"></i>Enter a 10 digit mobile number.</div></div>
+          <div class="field"><label for="m-email">Work email</label><input class="input" id="m-email" name="email" type="email" autocomplete="email" placeholder="you@brand.com" required><div class="err"><i class="ph ph-warning-circle"></i>Enter an email like name@brand.com.</div></div>
+        </div>
+        <div class="field">
+          <span class="legend" id="m-type-l">What do you need?</span>
+          <div class="chips" role="radiogroup" aria-labelledby="m-type-l">
+            <label class="chip"><input type="radio" name="type" value="Mailer box" required><span>Mailer box</span></label>
+            <label class="chip"><input type="radio" name="type" value="Rigid box"><span>Rigid box</span></label>
+            <label class="chip"><input type="radio" name="type" value="Mono carton"><span>Mono carton</span></label>
+            <label class="chip"><input type="radio" name="type" value="Paper bag"><span>Paper bag</span></label>
+            <label class="chip"><input type="radio" name="type" value="Not sure yet"><span>Not sure yet</span></label>
+          </div>
+          <div class="err"><i class="ph ph-warning-circle"></i>Pick a format, or choose Not sure yet.</div>
+        </div>
+        <div class="field"><label for="m-qty">Quantity</label>
+          <select class="input" id="m-qty" name="qty" required><option value="">Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
+          <div class="err"><i class="ph ph-warning-circle"></i>Choose a quantity range so we can price it.</div></div>
+        <div class="field"><label for="m-msg">Product and size <span class="opt">(optional)</span></label><textarea class="input" id="m-msg" name="message" placeholder="For example: 30 ml serum bottle, 4 cm wide, 12 cm tall"></textarea></div>
+        <button class="btn btn-primary submit" type="submit"><span class="label">Get my free quote</span> <i class="ph ph-arrow-right"></i></button>
+        <div class="assure"><span><i class="ph ph-clock"></i>Reply in 4 working hours</span><span><i class="ph ph-lock-simple"></i>We never share your details</span></div>
+      </form>
+      <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Quote request received</h3><p class="success-msg">A packaging specialist will call you within 4 working hours.</p><button class="btn btn-ghost reset-form" type="button">Send another request</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#f6f2ec"/><path d="M8 12l8-4 8 4v9l-8 4-8-4z M8 12l8 4 8-4M16 16v9" fill="none" stroke="#285247" stroke-width="2" stroke-linejoin="round"/></svg>CARTONNE</a>
+        <p>Custom packaging for brands that care how the box feels. Printed in Bengaluru, shipped across India.</p>
+      </div>
+      <div><h4>Packaging</h4><ul><li><a href="#products">Mailer boxes</a></li><li><a href="#products">Rigid boxes</a></li><li><a href="#products">Mono cartons</a></li><li><a href="#products">Paper bags</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#work">Work</a></li><li><a href="#process">How it works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Talk to us</h4><ul><li><a href="tel:+918047182290">+91 80 4718 2290</a></li><li><a href="mailto:hello@cartonne.in">hello@cartonne.in</a></li><li>Peenya Industrial Area, Bengaluru 560058</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr">2026</span> Cartonne Packaging Pvt. Ltd. · Website concept with illustrative stock photography</span>
+      <nav aria-label="Legal"><a href="legal.html#privacy">Privacy policy</a><a href="legal.html#terms">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mbar" id="mbar">
+  <a class="btn btn-ghost" href="tel:+918047182290"><i class="ph-fill ph-phone"></i> Call</a>
+  <button class="btn btn-primary" data-open-quote>Get a free quote</button>
+</div>
+
+<!-- QUOTE DRAWER -->
+<div class="drawer-backdrop" data-close-quote></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <button class="drawer-close" data-close-quote aria-label="Close quote form"><i class="ph ph-x"></i></button>
+  <div class="form-card">
+    <span class="eyebrow">Free quote · 4 fields</span>
+    <h3 id="drawer-title" style="margin-top:var(--s100)">Get your price in 4 working hours</h3>
+    <p class="form-sub">No payment and no spam. Just a clear quote and a sample date.</p>
+    <form class="lead-form" novalidate>
+      <div class="field"><label for="d-name">Your name</label><input class="input" id="d-name" name="name" autocomplete="name" placeholder="Priya Sharma" required><div class="err"><i class="ph ph-warning-circle"></i>Enter your name so we know who to ask for.</div></div>
+      <div class="field"><label for="d-phone">Phone or WhatsApp</label><div class="phone-wrap"><span class="cc">+91</span><input class="input" id="d-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="98765 43210" required data-type="phone"></div><div class="err"><i class="ph ph-warning-circle"></i>Enter a 10 digit mobile number.</div></div>
+      <div class="field">
+        <span class="legend" id="d-type-l">What do you need?</span>
+        <div class="chips" role="radiogroup" aria-labelledby="d-type-l">
+          <label class="chip"><input type="radio" name="type" value="Mailer box" required><span>Mailer box</span></label>
+          <label class="chip"><input type="radio" name="type" value="Rigid box"><span>Rigid box</span></label>
+          <label class="chip"><input type="radio" name="type" value="Mono carton"><span>Mono carton</span></label>
+          <label class="chip"><input type="radio" name="type" value="Paper bag"><span>Paper bag</span></label>
+          <label class="chip"><input type="radio" name="type" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+        <div class="err"><i class="ph ph-warning-circle"></i>Pick a format, or choose Not sure yet.</div>
+      </div>
+      <div class="field"><label for="d-qty">Quantity</label>
+        <select class="input" id="d-qty" name="qty" required><option value="">Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
+        <div class="err"><i class="ph ph-warning-circle"></i>Choose a quantity range so we can price it.</div></div>
+      <button class="btn btn-primary submit" type="submit"><span class="label">Get my free quote</span> <i class="ph ph-arrow-right"></i></button>
+      <div class="assure"><span><i class="ph ph-shield-check"></i>Free sample first</span><span><i class="ph ph-lock-simple"></i>Details stay private</span></div>
+    </form>
+    <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Quote request received</h3><p class="success-msg">A packaging specialist will call you within 4 working hours.</p><button class="btn btn-primary" type="button" data-close-quote>Back to the site</button></div>
+    <div class="call-alt"><i class="ph-fill ph-phone"></i><span>Prefer to talk now? <a href="tel:+918047182290">Call +91 80 4718 2290</a></span></div>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><span></span></div>
+
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var root=document.documentElement,body=document.body;
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* header shadow + mobile bar */
+  var header=$('#header'),mbar=$('#mbar'),hero=$('.hero');
+  new IntersectionObserver(function(e){
+    var past=!e[0].isIntersecting;mbar.classList.toggle('show',past);
+  },{rootMargin:'-60% 0px 0px 0px'}).observe(hero);
+  var ticking=false;
+  addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){header.classList.toggle('scrolled',scrollY>40);ticking=false;tagline();});},{passive:true});
+
+  /* mobile menu */
+  var menuBtn=$('.menu-btn'),mm=$('#mobile-menu');
+  function setMenu(open){
+    body.classList.toggle('menu-open',open);menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');mm.setAttribute('aria-hidden',!open);
+    $$('a,button',mm).forEach(function(a,i){a.style.transitionDelay=open?Math.min(i*60,400)+'ms':'0ms'});
+    body.style.overflow=open?'hidden':'';
+  }
+  menuBtn.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});
+  $$('a',mm).forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  /* active nav */
+  var links=$$('.nav a');
+  var secObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  ['products','work','process','reviews','faq','quote'].forEach(function(id){secObs.observe(document.getElementById(id))});
+
+  /* drawer */
+  var drawer=$('#drawer'),lastFocus=null;
+  function openQuote(type){
+    if(body.classList.contains('menu-open'))setMenu(false);
+    lastFocus=document.activeElement;
+    var card=$('.form-card',drawer);
+    if(card.classList.contains('form-done'))resetForm(card);
+    if(type){var r=$('input[name=type][value="'+type+'"]',drawer);if(r)r.checked=true;}
+    body.classList.add('drawer-open');drawer.setAttribute('aria-hidden','false');body.style.overflow='hidden';
+    setTimeout(function(){$('#d-name').focus()},350);
+  }
+  function closeQuote(){body.classList.remove('drawer-open');drawer.setAttribute('aria-hidden','true');body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  $$('[data-open-quote]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openQuote(b.getAttribute('data-type'))})});
+  $$('[data-close-quote]').forEach(function(b){b.addEventListener('click',closeQuote)});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){if(body.classList.contains('drawer-open'))closeQuote();else if(body.classList.contains('menu-open'))setMenu(false);}
+    if(e.key==='Tab'&&body.classList.contains('drawer-open')){
+      var f=$$('button,a,input,select,textarea',drawer).filter(function(x){return x.offsetParent!==null});
+      if(!f.length)return;var first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+    }
+  });
+
+  /* forms */
+  function digits(v){v=v.replace(/\D/g,'');if(v.length===12&&v.indexOf('91')===0)v=v.slice(2);if(v.length===11&&v[0]==='0')v=v.slice(1);return v}
+  function checkField(field){
+    var input=$('input,select,textarea',field);if(!input||!input.required)return true;
+    var ok;
+    if(input.type==='radio'){ok=!!$('input:checked',field)}
+    else if(input.dataset.type==='phone'){ok=/^[6-9]\d{9}$/.test(digits(input.value))}
+    else if(input.type==='email'){ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value.trim())}
+    else ok=input.value.trim().length>1||(input.tagName==='SELECT'&&input.value!=='');
+    field.classList.toggle('invalid',!ok);
+    $$('input,select,textarea',field).forEach(function(i){i.setAttribute('aria-invalid',!ok)});
+    return ok;
+  }
+  function progress(form){
+    var card=form.closest('.form-card'),bar=$('.progress .bar i',card);if(!bar)return;
+    var req=$$('.field',form).filter(function(f){var i=$('input,select,textarea',f);return i&&i.required});
+    var done=req.filter(function(f){var i=$('input,select,textarea',f);if(i.type==='radio')return !!$('input:checked',f);if(i.dataset.type==='phone')return /^[6-9]\d{9}$/.test(digits(i.value));if(i.type==='email')return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim());return i.value.trim()!==''}).length;
+    var p=Math.round(done/req.length*100);bar.style.transform='scaleX('+(p/100)+')';$('.pct',card).textContent=p+'% complete';
+  }
+  function resetForm(card){var f=$('form',card);f.reset();$$('.field',f).forEach(function(x){x.classList.remove('invalid')});card.classList.remove('form-done');progress(f);}
+  $$('.lead-form').forEach(function(form){
+    var card=form.closest('.form-card');
+    $$('.field',form).forEach(function(field){
+      $$('input,select,textarea',field).forEach(function(i){
+        i.addEventListener('blur',function(){if(i.value||field.classList.contains('invalid'))checkField(field)});
+        i.addEventListener('input',function(){if(field.classList.contains('invalid'))checkField(field);progress(form)});
+        i.addEventListener('change',function(){if(field.classList.contains('invalid'))checkField(field);progress(form)});
+      });
+    });
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var fields=$$('.field',form),bad=fields.filter(function(f){return !checkField(f)});
+      if(bad.length){var i=$('input,select,textarea',bad[0]);i.focus();return}
+      var btn=$('.submit',form),lbl=$('.label',btn),data=new FormData(form);
+      btn.setAttribute('aria-busy','true');lbl.textContent='Sending your request';
+      setTimeout(function(){
+        btn.removeAttribute('aria-busy');lbl.textContent='Get my free quote';
+        var name=(data.get('name')||'').trim().split(' ')[0];
+        $('.success-msg',card).textContent='Thanks, '+name+'. Ananya from our team will call +91 '+digits(data.get('phone'))+' within 4 working hours with a price for your '+String(data.get('type')).toLowerCase()+' order of '+data.get('qty')+' units.';
+        card.classList.add('form-done');
+        try{localStorage.setItem('cartonne_lead',JSON.stringify({name:name,type:data.get('type'),at:Date.now()}))}catch(err){}
+      },1100);
+    });
+    var r=$('.reset-form',card);if(r)r.addEventListener('click',function(){resetForm(card)});
+  });
+
+  /* work filter */
+  var cards=$$('.work-card'),tabs=$$('.tab'),empty=$('#work-empty');
+  tabs.forEach(function(t){
+    var f=t.dataset.filter,n=f==='all'?cards.length:cards.filter(function(c){return c.dataset.cat.split(' ').indexOf(f)>-1}).length;
+    t.insertAdjacentHTML('beforeend','<span class="n">'+n+'</span>');
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+      var shown=0;
+      cards.forEach(function(c){var on=f==='all'||c.dataset.cat.split(' ').indexOf(f)>-1;c.classList.toggle('is-hidden',!on);c.classList.remove('is-in');if(on){shown++;void c.offsetWidth;c.classList.add('is-in')}});
+      empty.style.display=shown?'none':'block';
+      var g=$('#work-grid');if(g._rebuild)g._rebuild();
+    });
+  });
+
+  /* swipe carousels (phone width) */
+  var mq=matchMedia('(max-width:640px)');
+  $$('.swipe').forEach(function(track){
+    var dots=document.createElement('div');dots.className='dots';dots.setAttribute('aria-label','Choose slide');track.after(dots);
+    function items(){return $$(':scope>*',track).filter(function(c){return c.offsetParent!==null&&!c.classList.contains('work-empty')})}
+    function build(){
+      var list=items();dots.innerHTML='';
+      list.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show item '+(i+1)+' of '+list.length);
+        b.addEventListener('click',function(){track.scrollTo({left:c.offsetLeft-track.offsetLeft-parseFloat(getComputedStyle(track).paddingLeft),behavior:'smooth'})});dots.appendChild(b)});
+      sync();
+    }
+    function sync(){
+      var list=items(),pad=parseFloat(getComputedStyle(track).paddingLeft),x=track.scrollLeft,best=0,d=1e9;
+      list.forEach(function(c,i){var dd=Math.abs(c.offsetLeft-track.offsetLeft-pad-x);if(dd<d){d=dd;best=i}});
+      if(track.scrollLeft+track.clientWidth>=track.scrollWidth-4)best=list.length-1;
+      $$('button',dots).forEach(function(b,i){b.setAttribute('aria-current',i===best)});
+    }
+    var t=false;track.addEventListener('scroll',function(){if(t)return;t=true;requestAnimationFrame(function(){sync();t=false})},{passive:true});
+    track._rebuild=function(){track.scrollLeft=0;build()};
+    (mq.addEventListener?mq.addEventListener('change',build):mq.addListener(build));
+    build();
+  });
+
+  /* reveal */
+  var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px',threshold:.08});
+  $$('.reveal').forEach(function(el,i){
+    var sib=el.parentElement?$$('.reveal',el.parentElement).indexOf(el):0;
+    el.style.transitionDelay=(Math.max(sib,0)%5)*60+'ms';rv.observe(el);
+  });
+
+  /* tagline word reveal */
+  var tl=$('#tagline');
+  (function split(){
+    var out='';
+    tl.childNodes.forEach(function(n){
+      var accent=n.nodeType===1,txt=n.textContent;
+      txt.split(/(\s+)/).forEach(function(w){if(!w.trim()){out+=w;return}out+='<span class="w'+(accent?' accent':'')+'">'+w+'</span>'});
+    });
+    tl.innerHTML=out;
+  })();
+  var words=$$('.w',tl);
+  function tagline(){
+    var line=innerHeight*0.72;
+    for(var i=0;i<words.length;i++){var r=words[i].getBoundingClientRect();words[i].classList.toggle('on',r.top<line)}
+  }
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){words.forEach(function(w){w.classList.add('on')})}
+  tagline();
+})();
+</script>
+</body>
+</html>
