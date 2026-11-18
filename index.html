@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!doctype html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Custom packaging boxes from 250 units | Cartonne</title>
@@ -11,447 +9,14 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#2055BC">
-<link rel="icon" type="image/png" href="assets/brand/favicon.png">
-<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
 <link rel="preload" as="image" href="assets/hero-mailer-unboxing.jpg">
-<style>
-:root{
-  /* Cartonne brand palette (Brand Guideline v1.0, section 3) */
-  --blue:#2055BC;--blue-dark:#173F8F;--blue-deep:#112E68;--blue-soft:#E9EFFA;
-  --beige:#D4B18D;--green:#DAEAA7;--green-ink:#3B4F12;
-  --ink:#000;--paper:#fff;--cream:#F7F1EA;--sand:#F0E4D7;--muted:#565C68;--line:#E6E0D8;--ok:#2f6b4f;--err:#a3402a;
-  /* Stolzl is the brand headline face (Adobe Fonts). Outfit is the free stand-in until the Adobe web kit is added. */
-  --font-head:"stolzl","Outfit",system-ui,sans-serif;--font-body:"Karla",system-ui,sans-serif;
-  --s25:2px;--s50:4px;--s75:8px;--s100:12px;--s200:16px;--s300:24px;--s400:32px;--s500:40px;--s600:48px;--s700:64px;--s800:80px;--s900:96px;
-  --ease:cubic-bezier(.22,1,.36,1);
-  --gutter:var(--s400);--max:1200px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:28px;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-h1,h2,h3,h4{text-wrap:balance;margin:0;font-family:var(--font-head);font-weight:700;letter-spacing:-.01em}
-h2{font-weight:500}
-h3{font-weight:500}
-p,li{text-wrap:pretty}
-a{color:inherit}
-button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.skip{position:absolute;left:var(--s200);top:-64px;background:var(--blue);color:#fff;padding:var(--s75) var(--s100);border-radius:8px;z-index:100;transition:transform .3s var(--ease)}
-.skip:focus{transform:translateY(80px)}
-.eyebrow{display:inline-flex;align-items:center;gap:var(--s75);font-size:12px;line-height:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
-.muted{color:var(--muted)}
-:is(.ph,.ph-fill,.ph-bold){line-height:1}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s75);border:0;border-radius:9999px;padding:var(--s75) var(--s100);font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .3s var(--ease),transform .5s var(--ease),box-shadow .3s var(--ease)}
-.btn:active{transform:scale(.98)}
-.btn-lg{padding:var(--s100) var(--s300)}
-.btn-primary{background:var(--blue);color:#fff}
-.btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(32,85,188,.25)}
-.btn-primary:active{transform:scale(.98)}
-.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
-.btn-ghost:hover{background:var(--cream);box-shadow:inset 0 0 0 1px var(--beige)}
-.btn-sm{font-size:14px;line-height:20px;padding:var(--s75) var(--s100)}
-.btn :is(.ph,.ph-fill,.ph-bold){font-size:20px}
-.btn-sm :is(.ph,.ph-fill,.ph-bold){font-size:16px}
-.btn[aria-busy=true]{pointer-events:none;opacity:.8}
-.btn[aria-busy=true] .label{animation:pulse 1.2s var(--ease) infinite}
-@keyframes pulse{50%{opacity:.4}}
-
-/* announcement */
-
-/* header */
-.header{position:sticky;top:var(--s100);z-index:40;margin:var(--s100) auto 0;max-width:calc(var(--max) - var(--s400));width:calc(100% - var(--s400));display:flex;align-items:center;justify-content:space-between;gap:var(--s200);padding:var(--s75) var(--s75) var(--s75) var(--s300);background:rgba(255,255,255,.78);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(227,219,207,.9);border-radius:9999px;transition:box-shadow .3s var(--ease)}
-.header.scrolled{box-shadow:0 8px 32px rgba(17,24,39,.10)}
-.brand{display:flex;align-items:center;text-decoration:none;flex:none}
-.brand img{width:200px;height:auto}
-.nav{display:flex;gap:var(--s50)}
-.nav a{text-decoration:none;font-size:14px;line-height:20px;font-weight:500;padding:var(--s75) var(--s100);border-radius:9999px;color:var(--muted);transition:background-color .3s var(--ease),color .3s var(--ease)}
-.nav a:hover{color:var(--blue);background:var(--cream)}
-.nav a[aria-current=true]{color:var(--ink);background:var(--cream)}
-.head-actions{display:flex;align-items:center;gap:var(--s75)}
-.call-link{display:inline-flex;align-items:center;gap:var(--s75);text-decoration:none;font-size:14px;line-height:20px;font-weight:600;padding:var(--s75) var(--s100);border-radius:9999px;transition:background-color .3s var(--ease)}
-.call-link:hover{background:var(--cream)}
-.call-link :is(.ph,.ph-fill,.ph-bold){font-size:16px;color:var(--blue)}
-.menu-btn{display:none;width:40px;height:40px;border:0;border-radius:9999px;background:var(--cream);cursor:pointer;position:relative}
-.menu-btn span{position:absolute;left:12px;width:16px;height:2px;background:var(--ink);border-radius:2px;transition:transform .5s var(--ease)}
-.menu-btn span:nth-child(1){transform:translateY(-3px)}
-.menu-btn span:nth-child(2){transform:translateY(3px)}
-.menu-open .menu-btn span:nth-child(1){transform:rotate(45deg)}
-.menu-open .menu-btn span:nth-child(2){transform:rotate(-45deg)}
-.mobile-menu{position:fixed;inset:0;z-index:35;background:rgba(255,255,255,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:128px var(--s300) var(--s400);display:flex;flex-direction:column;gap:var(--s75);opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
-.menu-open .mobile-menu{opacity:1;pointer-events:auto}
-.mobile-menu a{font-size:30px;line-height:36px;font-weight:600;text-decoration:none;padding:var(--s75) 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
-.menu-open .mobile-menu a{opacity:1;transform:none}
-.mobile-menu .btn{margin-top:var(--s300);font-size:16px;line-height:24px;padding:var(--s100) var(--s300)}
-.mobile-menu .mm-call{font-size:18px;line-height:28px;color:var(--blue)}
-
-/* hero */
-.hero{padding:var(--s700) 0 var(--s800)}
-.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--s700);align-items:center}
-.hero h1{font-size:48px;line-height:1.08;max-width:680px;margin:var(--s200) 0 var(--s300);color:var(--blue)}
-.hero .sub{font-size:18px;line-height:28px;color:var(--muted);max-width:680px;margin:0 0 var(--s400)}
-.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s200)}
-.rating{display:flex;align-items:center;gap:var(--s100);margin-top:var(--s400);padding-top:var(--s300);border-top:1px solid var(--line);font-size:14px;line-height:20px}
-.stars{color:#C69A6B;display:flex;gap:var(--s25)}
-.hero-media{position:relative}
-.hero-photo{border-radius:24px;overflow:hidden;aspect-ratio:4/4.2;background:var(--sand)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
-.float-card{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:var(--s100) var(--s200);display:flex;align-items:center;gap:var(--s100);box-shadow:0 16px 40px rgba(17,24,39,.14);font-size:14px;line-height:20px}
-.float-card strong{display:block;font-size:16px;line-height:24px}
-.float-card .ico{width:40px;height:40px;border-radius:9999px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:20px;flex:none}
-.fc-1{left:calc(-1 * var(--s400));bottom:var(--s600)}
-
-/* logos */
-.logos{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--s300) 0}
-.logos .wrap{display:flex;align-items:center;gap:var(--s400);justify-content:space-between;flex-wrap:wrap}
-.logos p{margin:0;font-size:14px;line-height:20px;color:var(--muted);flex:none}
-.logo-row{display:flex;gap:var(--s500);flex-wrap:wrap;align-items:center;color:#7d8290;font-family:var(--font-head)}
-
-/* sections */
-.section{padding:var(--s900) 0}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s400);margin-bottom:var(--s500)}
-.section-head h2{font-size:32px;line-height:40px;color:var(--blue);margin-top:var(--s100);max-width:680px}
-.section-head p{max-width:400px;margin:0;color:var(--muted)}
-.bg-cream{background:var(--cream)}
-
-
-/* products */
-.products{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s200)}
-.product{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:var(--s75);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.product:hover{border-color:var(--beige);transform:translateY(-4px);box-shadow:0 16px 40px rgba(17,24,39,.10)}
-.product .img{border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:var(--cream)}
-.product img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.product:hover img{transform:scale(1.04)}
-.product .body{padding:var(--s100) var(--s75) var(--s75);display:flex;flex-direction:column;gap:var(--s50);flex:1}
-.product h3{font-size:18px;line-height:28px}
-.product p{margin:0;font-size:14px;line-height:20px;color:var(--muted)}
-.product .price{margin-top:auto;padding-top:var(--s100);font-size:14px;line-height:20px;display:flex;justify-content:space-between;align-items:baseline;gap:var(--s75)}
-.product .price strong{font-size:16px;line-height:24px}
-.product .btn{margin-top:var(--s100);width:100%}
-
-
-/* tagline */
-.tagline{padding:var(--s900) 0}
-.tagline p{font-size:48px;line-height:1.08;font-weight:500;font-family:var(--font-head);letter-spacing:-.02em;max-width:880px;margin:0;text-wrap:balance}
-.tagline .w{color:rgba(0,0,0,.2);transition:color .5s var(--ease)}
-.tagline .w.on{color:var(--ink)}
-.tagline .w.accent.on{color:var(--blue)}
-
-/* work */
-.tabs{display:flex;gap:var(--s75);flex-wrap:wrap;margin-bottom:var(--s400)}
-.tab{border:1px solid var(--line);background:var(--paper);border-radius:9999px;padding:var(--s75) var(--s200);font-size:14px;line-height:20px;font-weight:600;color:var(--muted);cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .5s var(--ease)}
-.tab:hover{color:var(--ink);background:var(--cream)}
-.tab:active{transform:scale(.98)}
-.tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
-.tab .n{opacity:.6;margin-left:var(--s50);font-weight:500}
-.work-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;grid-auto-flow:dense;gap:var(--s200)}
-.work-card{position:relative;border-radius:16px;overflow:hidden;background:var(--sand);margin:0}
-.work-card.tall{grid-row:span 2}
-.work-card.wide{grid-column:span 2}
-.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.work-card:hover img{transform:scale(1.04)}
-.work-card figcaption{position:absolute;left:var(--s100);right:var(--s100);bottom:var(--s100);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:8px;padding:var(--s75) var(--s100);font-size:14px;line-height:20px;display:flex;justify-content:space-between;gap:var(--s75)}
-.work-card figcaption strong{font-weight:600}
-.work-card figcaption span{color:var(--muted)}
-.work-card.is-hidden{display:none}
-.work-card.is-in{animation:cardIn .5s var(--ease) both}
-@keyframes cardIn{from{opacity:0;transform:translateY(16px)}}
-.work-empty{display:none;grid-column:1/-1;border:1px dashed var(--line);border-radius:16px;padding:var(--s600);text-align:center;color:var(--muted)}
-
-
-/* proof */
-.proof-band{background:var(--blue);color:#fff;padding:var(--s900) 0}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s300);padding-bottom:var(--s700);margin-bottom:var(--s700);border-bottom:1px solid rgba(255,255,255,.16)}
-.stat strong{display:block;font-size:48px;line-height:1;font-weight:700;font-family:var(--font-head);letter-spacing:-.02em;margin-bottom:var(--s100)}
-.stat span{font-size:14px;line-height:20px;color:rgba(255,255,255,.8)}
-.proof-band .eyebrow{color:var(--beige)}
-.proof-band h2{font-size:32px;line-height:40px;margin:var(--s100) 0 var(--s500);max-width:680px}
-.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:var(--s300);display:flex;flex-direction:column;gap:var(--s300);margin:0}
-.quote blockquote{margin:0;font-size:16px;line-height:24px}
-.quote .stars{color:var(--beige)}
-.quote figcaption{margin-top:auto;display:flex;align-items:center;gap:var(--s100);font-size:14px;line-height:20px}
-.quote figcaption .av{width:40px;height:40px;border-radius:9999px;display:grid;place-items:center;font-weight:700;background:var(--beige);color:#000;flex:none}
-.quote figcaption span{display:block;color:rgba(255,255,255,.8)}
-
-/* faq */
-.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s700);align-items:start}
-.faq-side h2{font-size:32px;line-height:40px;color:var(--blue);margin:var(--s100) 0 var(--s200)}
-.faq-side p{color:var(--muted);margin:0 0 var(--s300)}
-.faq-list{border-top:1px solid var(--line)}
-.faq-list details{border-bottom:1px solid var(--line)}
-.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:var(--s200);padding:var(--s300) 0;font-size:18px;line-height:28px;font-weight:600;border-radius:8px}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary :is(.ph,.ph-fill,.ph-bold){font-size:20px;flex:none;transition:transform .5s var(--ease);color:var(--blue)}
-.faq-list details[open] summary :is(.ph,.ph-fill,.ph-bold){transform:rotate(45deg)}
-.faq-list details p{margin:0 0 var(--s300);color:var(--muted);max-width:640px}
-
-/* contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s700);align-items:start}
-.contact h2{font-size:48px;line-height:1.08;font-weight:700;color:var(--blue);margin:var(--s100) 0 var(--s300)}
-.contact .lead{font-size:18px;line-height:28px;color:var(--muted);margin:0 0 var(--s400)}
-.direct{display:grid;grid-template-columns:1fr 1fr;gap:var(--s100)}
-.direct a{display:flex;align-items:center;gap:var(--s100);padding:var(--s200);border-radius:16px;border:1px solid var(--line);text-decoration:none;background:var(--paper);transition:transform .5s var(--ease),background-color .3s var(--ease)}
-.direct a:hover{transform:translateY(-2px);background:#fff}
-.direct :is(.ph,.ph-fill,.ph-bold){font-size:24px;color:var(--blue)}
-.direct small{display:block;font-size:12px;line-height:16px;color:var(--muted)}
-.direct strong{font-size:14px;line-height:20px}
-
-/* forms */
-.form-card{background:var(--paper);border-radius:24px;padding:var(--s400);border:1px solid var(--line);box-shadow:0 24px 64px rgba(17,24,39,.08)}
-.form-card h3{font-size:24px;line-height:32px;margin-bottom:var(--s50)}
-.form-card .form-sub{margin:0 0 var(--s300);font-size:14px;line-height:20px;color:var(--muted)}
-.field{margin-bottom:var(--s200)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s200)}
-label,.legend{display:block;font-size:14px;line-height:20px;font-weight:600;margin-bottom:var(--s75)}
-label .opt{font-weight:500;color:var(--muted)}
-.input{width:100%;padding:var(--s100) var(--s200);border:1px solid #d6cdc0;border-radius:12px;background:#fff;font-size:16px;line-height:24px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
-.input:hover{border-color:#bfb4a5}
-.input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(32,85,188,.15)}
-textarea.input{min-height:96px;resize:vertical}
-select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 256 256'%3E%3Cpath d='M213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32z' fill='%235f6660'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:var(--s500)}
-.phone-wrap{display:flex}
-.phone-wrap .cc{display:flex;align-items:center;padding:0 var(--s100);border:1px solid #d6cdc0;border-right:0;border-radius:12px 0 0 12px;background:var(--cream);font-size:14px;line-height:20px;color:var(--muted)}
-.phone-wrap .input{border-radius:0 12px 12px 0}
-.chips{display:flex;flex-wrap:wrap;gap:var(--s75);border:0;padding:0;margin:0}
-.chip input{position:absolute;opacity:0;pointer-events:none}
-.chip span{display:inline-flex;align-items:center;gap:var(--s50);padding:var(--s75) var(--s100);border-radius:9999px;border:1px solid #d6cdc0;font-size:14px;line-height:20px;font-weight:500;cursor:pointer;background:#fff;transition:background-color .3s var(--ease),border-color .3s var(--ease),transform .5s var(--ease)}
-.chip span:hover{border-color:var(--blue)}
-.chip span:active{transform:scale(.98)}
-.chip input:checked+span{background:var(--blue);border-color:var(--blue);color:#fff}
-.chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
-.err{display:none;margin-top:var(--s50);font-size:14px;line-height:20px;color:var(--err)}
-.field.invalid .input{border-color:var(--err)}
-.field.invalid .err{display:flex;gap:var(--s50);align-items:center}
-.submit{width:100%;padding:var(--s100) var(--s300)}
-.success{display:none;text-align:center;padding:var(--s400) var(--s200)}
-.success :is(.ph,.ph-fill,.ph-bold){font-size:48px;color:var(--ok);margin-bottom:var(--s200)}
-.success h3{margin-bottom:var(--s75)}
-.success p{color:var(--muted);margin:0 0 var(--s300)}
-.form-done form{display:none}
-.form-done .success{display:block;animation:cardIn .5s var(--ease) both}
-
-/* drawer */
-.drawer-backdrop{position:fixed;inset:0;background:rgba(17,24,39,.45);z-index:60;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
-.drawer{position:fixed;top:var(--s100);right:var(--s100);bottom:var(--s100);width:min(480px,calc(100% - 24px));z-index:61;background:var(--paper);border-radius:24px;overflow:auto;transform:translateX(calc(100% + 24px));transition:transform .5s var(--ease);box-shadow:0 24px 80px rgba(0,0,0,.2)}
-.drawer .form-card{border:0;box-shadow:none;border-radius:0}
-.drawer-open .drawer{transform:none}
-.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
-.drawer-close{position:absolute;top:var(--s200);right:var(--s200);width:40px;height:40px;border-radius:9999px;border:0;background:var(--cream);cursor:pointer;display:grid;place-items:center;font-size:20px;transition:background-color .3s var(--ease),transform .5s var(--ease)}
-.drawer-close:hover{background:var(--sand)}
-.drawer-close:active{transform:scale(.96)}
-.drawer .call-alt{display:flex;align-items:center;gap:var(--s100);margin-top:var(--s300);padding-top:var(--s300);border-top:1px solid var(--line);font-size:14px;line-height:20px;color:var(--muted)}
-.drawer .call-alt a{font-weight:600;color:var(--blue)}
-
-/* mobile bar */
-.mbar{display:none}
-
-/* footer */
-.footer{background:var(--blue-deep);color:rgba(255,255,255,.78);padding:var(--s700) 0 var(--s400);font-size:14px;line-height:20px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--s400);padding-bottom:var(--s500);border-bottom:1px solid rgba(255,255,255,.12)}
-.footer .brand{margin-bottom:var(--s300)}
-.footer h4{margin:0 0 var(--s200);font-size:14px;line-height:20px;color:#fff;font-weight:600}
-.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--s75)}
-.footer a{text-decoration:none;transition:color .3s var(--ease)}
-.footer a:hover{color:#fff}
-.footer-bottom{display:flex;justify-content:space-between;gap:var(--s200);flex-wrap:wrap;padding-top:var(--s300);font-size:12px;line-height:16px;color:rgba(255,255,255,.6)}
-.footer-bottom nav{display:flex;gap:var(--s200)}
-
-.dots{display:none}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-
-/* toast */
-.toast{position:fixed;left:50%;bottom:var(--s300);z-index:80;background:var(--ink);color:#fff;padding:var(--s100) var(--s200);border-radius:12px;font-size:14px;line-height:20px;display:flex;gap:var(--s75);align-items:center;opacity:0;transform:translate(-50%,16px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;transition-property:opacity,color,background-color!important}
-  .reveal{transform:none}
-  .mobile-menu a{transform:none}
-}
-
-/* responsive */
-@media (max-width:1100px){
-  .products{grid-template-columns:repeat(3,1fr)}
-  .nav{display:none}
-  .menu-btn{display:block}
-  .fc-1{left:var(--s200)}
-}
-@media (max-width:860px){
-  :root{--gutter:var(--s300)}
-  .hero{padding:var(--s500) 0 var(--s700)}
-  .hero-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:var(--s500)}
-  .hero h1{font-size:48px}
-  .section{padding:var(--s800) 0}
-  .section-head{flex-direction:column;align-items:flex-start;gap:var(--s200)}
-  .work-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
-  .stats{grid-template-columns:repeat(2,1fr);gap:var(--s400) var(--s300)}
-  .tagline p{font-size:36px;line-height:40px}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .call-link .num{display:none}
-}
-@media (max-width:640px){
-  :root{--gutter:var(--s200)}
-  html{scroll-padding-top:80px}
-  .header{top:var(--s75);margin-top:var(--s75);width:calc(100% - var(--s200));padding-left:var(--s200)}
-  .call-link{padding:var(--s75) var(--s100)}
-  .head-actions .btn-primary{display:none}
-  .hero h1{font-size:36px;line-height:40px}
-  .hero h1 br{display:none}
-  .hero .sub{font-size:16px;line-height:24px}
-  .hero-cta .btn{width:100%}
-  .hero-photo{aspect-ratio:4/3.4;border-radius:16px}
-  .fc-1{left:var(--s100);bottom:var(--s100)}
-  .products{grid-template-columns:1fr;gap:var(--s200)}
-  .product .img{aspect-ratio:4/3}
-  .section-head h2,.faq-side h2,.proof-band h2{font-size:30px;line-height:36px}
-  .contact h2{font-size:36px;line-height:40px}
-  .tagline p{font-size:30px;line-height:36px}
-  .work-grid{grid-auto-rows:160px;gap:var(--s100)}
-  .work-card figcaption span{display:none}
-  .stat strong{font-size:36px}
-  .row2,.direct{grid-template-columns:1fr}
-  .form-card{padding:var(--s300)}
-  .logo-row{gap:var(--s200) var(--s300)}
-  .footer-grid{grid-template-columns:1fr}
-  .mbar{position:fixed;left:var(--s75);right:var(--s75);bottom:var(--s75);z-index:50;display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s75);padding:var(--s75);border-radius:9999px;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 8px 32px rgba(17,24,39,.16);transform:translateY(calc(100% + 16px));transition:transform .5s var(--ease)}
-  .mbar.show{transform:none}
-  .mbar .btn{padding:var(--s100)}
-  body{padding-bottom:var(--s700)}
-  /* swipe carousels */
-  .swipe{display:flex;gap:var(--s100);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(-1 * var(--gutter));padding:0 var(--gutter) var(--s25);scroll-padding:0 var(--gutter)}
-  .swipe::-webkit-scrollbar{display:none}
-  .swipe>*{flex:0 0 82%;scroll-snap-align:start}
-  .work-grid.swipe{grid-auto-rows:auto}
-  .work-grid.swipe .work-card,.work-grid.swipe .work-card.tall,.work-grid.swipe .work-card.wide{height:400px;grid-row:auto;grid-column:auto}
-  .work-grid.swipe .work-card.is-hidden{display:none}
-  .work-grid.swipe .work-empty{flex-basis:100%}
-  .work-grid.swipe .work-card figcaption span{display:inline}
-  .dots{display:flex;justify-content:center;gap:var(--s75);margin-top:var(--s200)}
-  .dots button{width:8px;height:8px;padding:0;border:0;border-radius:9999px;background:var(--line);cursor:pointer;transition:background-color .3s var(--ease),transform .5s var(--ease)}
-  .dots button[aria-current=true]{background:var(--blue);transform:scale(1.25)}
-  .dots button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-}
-
-/* ---- refresh: lighter layout, graphic highlights and process ---- */
-.hero{padding:var(--s800) 0 var(--s900)}
-.hero h1{font-size:56px;line-height:1.04;margin:0 0 var(--s300)}
-.hero .sub{font-size:20px;line-height:30px;max-width:460px}
-.rating{border-top:0;padding-top:0;margin-top:var(--s400)}
-.float-card .ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.float-card{padding:var(--s100) var(--s300) var(--s100) var(--s100)}
-
-.highlights .wrap{padding-top:0;padding-bottom:0}
-.hl-list{list-style:none;margin:0;padding:var(--s400);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s300);background:var(--cream);border-radius:24px}
-.hl-list li{display:flex;align-items:center;gap:var(--s200)}
-.hl-ico{width:56px;height:56px;border-radius:16px;background:#fff;color:var(--blue);display:grid;place-items:center;flex:none;box-shadow:0 1px 0 var(--line)}
-.hl-ico svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hl-list strong{font-family:var(--font-head);font-weight:500;font-size:18px;line-height:24px}
-
-.logos{border:0;padding:var(--s500) 0 0}
-.logos p{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-
-.section-head{margin-bottom:var(--s400)}
-.section-head h2,.faq-side h2{font-size:40px;line-height:48px}
-.product{border:0;background:transparent;padding:0}
-.product:hover{box-shadow:none}
-.product .img{border-radius:16px}
-.product .body{padding:var(--s200) var(--s25) 0}
-.product .price{padding-top:var(--s50);margin-top:0;justify-content:flex-start}
-
-.tagline{padding:var(--s900) 0}
-.eco-pill{display:inline-flex;align-items:center;gap:var(--s75);margin-top:var(--s400);background:var(--green);color:var(--green-ink);padding:var(--s75) var(--s200);border-radius:9999px;font-size:14px;line-height:20px;font-weight:600}
-
-.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:var(--s200)}
-.flow-step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s100)}
-.flow-art{position:relative;width:184px;height:184px;border-radius:9999px;background:#fff;display:grid;place-items:center;margin-bottom:var(--s200);box-shadow:0 16px 40px rgba(17,24,39,.06);transition:transform .5s var(--ease)}
-.flow-step:hover .flow-art{transform:translateY(-4px)}
-.flow-art svg{width:124px;height:124px;fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.flow-art .fb{fill:var(--beige)}.flow-art .fw{fill:#fff}.flow-art .fbl{fill:var(--blue)}.flow-art .sw{stroke:#fff}
-.flow-num{position:absolute;top:6px;left:6px;width:40px;height:40px;border-radius:9999px;background:var(--blue);color:#fff;font-family:var(--font-head);font-weight:600;font-size:16px;line-height:1;display:grid;place-items:center}
-.flow-step h3{font-size:20px;line-height:28px}
-.flow-time{font-size:14px;line-height:20px;color:var(--muted)}
-.flow-arrow{width:72px;height:16px;margin-top:84px;fill:none;stroke:var(--beige);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.flow-cta{display:flex;justify-content:center;margin-top:var(--s700)}
-
-.stats{padding-bottom:var(--s600);margin-bottom:var(--s600)}
-.feature-quote{background:none;border:0;padding:0;max-width:900px;gap:var(--s400)}
-.feature-quote blockquote{font-family:var(--font-head);font-weight:500;font-size:36px;line-height:44px;letter-spacing:-.01em;text-wrap:balance}
-
-.faq-side .btn{margin-top:var(--s300)}
-.contact .lead{margin-bottom:var(--s400)}
-.form-card h3{margin-bottom:var(--s300)}
-
-@media (max-width:1100px){
-  .hl-list{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:860px){
-  .hero h1{font-size:44px;line-height:48px}
-  .flow{grid-template-columns:1fr;gap:var(--s100)}
-  .flow-arrow{transform:rotate(90deg);margin:var(--s300) auto}
-  .feature-quote blockquote{font-size:28px;line-height:36px}
-}
-@media (max-width:640px){
-  .hero h1{font-size:40px;line-height:44px}
-  .hero .sub{font-size:18px;line-height:28px}
-  .hl-list{padding:var(--s300);gap:var(--s300) var(--s200)}
-  .hl-list li{flex-direction:column;align-items:flex-start;gap:var(--s100)}
-  .hl-ico{width:48px;height:48px}
-  .hl-list strong{font-size:16px;line-height:22px}
-  .section-head h2,.faq-side h2{font-size:32px;line-height:40px}
-  .products{grid-template-columns:1fr 1fr;gap:var(--s300) var(--s100)}
-  .product .img{aspect-ratio:4/5}
-  .product:last-child{grid-column:span 2}
-  .product:last-child .img{aspect-ratio:16/9}
-  .product h3{font-size:16px;line-height:22px}
-  .flow-art{width:160px;height:160px}
-  .flow-art svg{width:108px;height:108px}
-  .feature-quote blockquote{font-size:24px;line-height:32px}
-}
-
-/* ---- doodle round: client logos, story flow, FAQ caller ---- */
-.logo-row{gap:var(--s500)}
-.client{display:inline-flex;align-items:center;gap:var(--s75);color:#7d8290;transition:color .3s var(--ease)}
-.client:hover{color:var(--ink)}
-.client b{font-family:var(--font-head);font-weight:600;font-size:18px;line-height:24px;white-space:nowrap}
-.client em{font-style:normal;font-size:11px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px var(--s75);border-radius:6px;background:var(--cream);color:#8a6a48}
-
-.flow{grid-template-columns:auto auto 1fr auto 1fr auto 1fr auto auto;gap:var(--s200)}
-.flow-art{width:152px;height:152px}
-.flow-art svg{width:104px;height:104px}
-.flow-arrow{width:48px;margin-top:68px}
-.flow-mood{display:flex;flex-direction:column;align-items:center;gap:var(--s100);text-align:center;font-size:14px;line-height:20px;color:var(--muted);font-style:italic}
-.mood-art{width:112px;height:112px;margin-top:20px;margin-bottom:var(--s200)}
-.mood-art svg,.caller{width:100%;height:100%;fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-:is(.mood-art,.caller) .fb{fill:var(--beige)}:is(.mood-art,.caller) .fw{fill:#fff}:is(.mood-art,.caller) .fbl{fill:var(--blue)}
-.flow-step h3{max-width:200px}
-
-.faq-call{margin-top:var(--s500);display:flex;flex-direction:column;align-items:flex-start;gap:var(--s200)}
-.caller{width:160px;height:170px}
-.faq-still{margin:0;font-family:var(--font-head);font-weight:500;font-size:24px;line-height:32px;color:var(--ink)}
-.faq-side .btn{margin-top:0}
-
-@media (max-width:1000px){
-  .flow{grid-template-columns:1fr;justify-items:center;gap:var(--s100)}
-  .flow-arrow{transform:rotate(90deg);margin:var(--s200) auto}
-  .mood-art{margin-top:0}
-}
-@media (max-width:640px){
-  .logo-row{gap:var(--s300)}
-  .client b{font-size:16px}
-  .caller{width:128px;height:136px}
-}
-</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Minimum order?","acceptedAnswer":{"@type":"Answer","text":"250 units. 300 for rigid boxes."}},
@@ -461,8 +26,9 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 {"@type":"Question","name":"How do payments work?","acceptedAnswer":{"@type":"Answer","text":"50% to start, the rest before dispatch. UPI, NEFT or card."}}
 ]}
 </script>
-</head>
-<body>
+
+<link rel="icon" href="assets/brand/favicon.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png"><link rel="stylesheet" href="styles.css"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="header" id="header">
@@ -482,7 +48,7 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
   </div>
 </header>
 
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
   <a href="#products">Products</a>
   <a href="#work">Work</a>
   <a href="#process">Process</a>
@@ -497,21 +63,94 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy-block">
+      <div class="hero-kicker">
+        <span class="pulse-dot"></span>
+        <span>Low 250-Unit Minimums · Free Structural Dieline Samples</span>
+      </div>
       <h1 id="hero-title">The right box,<br>for every product.</h1>
-      <p class="sub">Custom packaging from 250 units. Sampled first, delivered across India.</p>
+      <p class="sub">Custom printed mailer boxes, rigid gift packaging, mono cartons, and boutique bags for growing brands. Sampled first in 5 days, delivered across India.</p>
+
       <div class="hero-cta">
         <button class="btn btn-primary btn-lg" data-open-quote>Get a free quote <i class="ph ph-arrow-right"></i></button>
         <a class="btn btn-ghost btn-lg" href="#work">See our work</a>
+        <a class="hero-catalog-btn" href="#products"><i class="ph-bold ph-book-open"></i> Browse Catalog</a>
       </div>
-      <div class="rating">
-        <div class="stars" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
-        <span><strong>4.8</strong> <span class="muted">· 212 Google reviews</span></span>
+
+      <div class="hero-trust-bar">
+        <div class="rating">
+          <div class="stars" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+          <span><strong>4.8</strong> <span class="muted">· 212 verified reviews</span></span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-perk-item">
+          <i class="ph-fill ph-seal-check"></i>
+          <span>Zero Tooling / Die Fees</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-perk-item">
+          <i class="ph-fill ph-clock"></i>
+          <span>4-Hour Quote Reply</span>
+        </div>
       </div>
     </div>
+
     <div class="hero-media">
-      <div class="hero-photo"><img src="assets/hero-mailer-unboxing.jpg" alt="Hands opening a plain kraft mailer box" width="1600" height="1067" fetchpriority="high"></div>
-      <div class="float-card fc-1"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"/></svg></span><div><strong>Sample approved</strong>in 5 days</div></div>
+      <div class="hero-visual-frame">
+        <!-- Interactive Packaging Showcase Carousel -->
+        <div class="hero-slider" id="hero-slider">
+          <div class="hero-slide active" data-format="Roll End Tuck Mailer" data-spec="E-Flute Corrugated · 1.5mm" data-price="₹18.40">
+            <img src="assets/brand-2.png" alt="Hands unboxing kraft mailer box" width="1600" height="1067">
+            <div class="slide-caption">Mailer Unboxing</div>
+          </div>
+          <div class="hero-slide" data-format="Lidded Rigid Gift Box" data-spec="1600 GSM Greyboard · Textured Paper" data-price="₹64.50">
+            <img src="assets/brand-3.png" alt="Luxury rigid box collection" width="1600" height="1067">
+            <div class="slide-caption">Luxury Rigid Boxes</div>
+          </div>
+          <div class="hero-slide" data-format="Spiral Wound Paper Tubes" data-spec="1.8mm Kraft Multi-ply Canister" data-price="₹28.50">
+            <img src="assets/kraft-tubes.jpg" alt="Kraft cylinder paper tubes for beauty" width="1600" height="1067">
+            <div class="slide-caption">Apothecary Kraft Tubes</div>
+          </div>
+          <div class="hero-slide" data-format="Mono Folding Carton" data-spec="350 GSM Virgin FBB Stock" data-price="₹6.85">
+            <img src="assets/coffee-carton.jpg" alt="Folding coffee packaging carton" width="1600" height="1067">
+            <div class="slide-caption">Specialty Coffee Cartons</div>
+          </div>
+        </div>
+
+        <!-- Slider Controls Navigation -->
+        <div class="hero-slider-nav">
+          <button class="slider-btn prev" id="slider-prev" aria-label="Previous slide"><i class="ph-bold ph-caret-left"></i></button>
+          <div class="slider-dots" id="slider-dots">
+            <button class="s-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="s-dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="s-dot" data-index="2" aria-label="Slide 3"></button>
+            <button class="s-dot" data-index="3" aria-label="Slide 4"></button>
+          </div>
+          <button class="slider-btn next" id="slider-next" aria-label="Next slide"><i class="ph-bold ph-caret-right"></i></button>
+        </div>
+
+        <!-- Live Proof Badge 1: Top Right Specs (Dynamic to active slide) -->
+        <div class="float-card fc-top-right float-anim">
+          <div class="spec-pill">FSC Certified Board</div>
+          <strong id="live-slide-format">E-Flute Corrugated</strong>
+          <span class="sub-txt" id="live-slide-spec">1.5mm Caliper · Water-based Inks</span>
+        </div>
+
+        <!-- Live Proof Badge 2: Bottom Left Sample -->
+        <div class="float-card fc-1 float-anim-delayed">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"></path></svg></span>
+          <div>
+            <strong>Sample approved</strong>
+            <span>Courier dispatched in 5 days</span>
+          </div>
+        </div>
+
+        <!-- Live Proof Badge 3: Bottom Right Pricing (Dynamic to active slide) -->
+        <div class="float-badge-price float-anim">
+          <small>Starting from</small>
+          <strong><span id="live-slide-price">₹18.40</span><span class="unit">/box</span></strong>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -520,19 +159,37 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 <section class="highlights" aria-label="Why Cartonne">
   <div class="wrap">
     <ul class="hl-list">
-      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5 5 10.5 16 16l11-5.5z"/><path d="m5 16 11 5.5L27 16"/><path d="m5 21.5 11 5.5 11-5.5"/></svg></span><strong>From 250 units</strong></li>
-      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="2"/><rect x="18" y="5" width="9" height="9" rx="2"/><rect x="5" y="18" width="9" height="9" rx="2"/><path d="M22.5 18.5v8M18.5 22.5h8"/></svg></span><strong>One stop solution for all your needs</strong></li>
-      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 10v12l-11 6-11-6V10z"/><path d="m5 10 11 6 11-6M16 16v12"/><path d="m10.5 7 11 6"/></svg></span><strong>Flexible sampling</strong></li>
-      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 3"/></svg></span><strong>Production in time</strong></li>
+      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5 5 10.5 16 16l11-5.5z"></path><path d="m5 16 11 5.5L27 16"></path><path d="m5 21.5 11 5.5 11-5.5"></path></svg></span><strong>From 250 units</strong></li>
+      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="2"></rect><rect x="18" y="5" width="9" height="9" rx="2"></rect><rect x="5" y="18" width="9" height="9" rx="2"></rect><path d="M22.5 18.5v8M18.5 22.5h8"></path></svg></span><strong>One stop solution for all your needs</strong></li>
+      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 10v12l-11 6-11-6V10z"></path><path d="m5 10 11 6 11-6M16 16v12"></path><path d="m10.5 7 11 6"></path></svg></span><strong>Flexible sampling</strong></li>
+      <li class="reveal"><span class="hl-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"></circle><path d="M16 10v6l4 3"></path></svg></span><strong>Production in time</strong></li>
     </ul>
   </div>
 </section>
 
 <!-- LOGOS -->
 <section class="logos" aria-label="Brands that use Cartonne">
-  <div class="wrap">
-    <p>Trusted by 387 brands</p>
-    <div class="logo-row" aria-label="Araku Organics, Subko Coffee, Bare Necessities"><span class="client"><b>Araku Organics</b><em>Botanicals</em></span><span class="client"><b>Subko Coffee</b><em>Roastery</em></span><span class="client"><b>Bare Necessities</b><em>Zero-waste</em></span></div>
+  <div class="wrap" style="text-align:center;margin-bottom:12px;">
+    <p>Trusted by 387+ leading Indian brands &amp; fast-growing DTC founders</p>
+  </div>
+  <div class="logo-ticker">
+    <div class="ticker-track">
+      <span class="ticker-client"><b>Araku Organics</b><em>Botanicals</em></span>
+      <span class="ticker-client"><b>Subko Coffee</b><em>Specialty Roastery</em></span>
+      <span class="ticker-client"><b>Bare Necessities</b><em>Zero-Waste Care</em></span>
+      <span class="ticker-client"><b>Sumaavi Living</b><em>Home &amp; Loom</em></span>
+      <span class="ticker-client"><b>Kiro Beauty</b><em>Clean Cosmetics</em></span>
+      <span class="ticker-client"><b>Nariël Cacao</b><em>Artisan Confections</em></span>
+      <span class="ticker-client"><b>Paul and Mike</b><em>Farm-to-Bar</em></span>
+      <!-- Duplicate for seamless 100% infinite loop -->
+      <span class="ticker-client"><b>Araku Organics</b><em>Botanicals</em></span>
+      <span class="ticker-client"><b>Subko Coffee</b><em>Specialty Roastery</em></span>
+      <span class="ticker-client"><b>Bare Necessities</b><em>Zero-Waste Care</em></span>
+      <span class="ticker-client"><b>Sumaavi Living</b><em>Home &amp; Loom</em></span>
+      <span class="ticker-client"><b>Kiro Beauty</b><em>Clean Cosmetics</em></span>
+      <span class="ticker-client"><b>Nariël Cacao</b><em>Artisan Confections</em></span>
+      <span class="ticker-client"><b>Paul and Mike</b><em>Farm-to-Bar</em></span>
+    </div>
   </div>
 </section>
 
@@ -601,15 +258,15 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
       <button class="tab" role="tab" aria-selected="false" data-filter="retail">Retail</button>
     </div>
     <div class="work-grid swipe" id="work-grid" aria-label="Project gallery, swipe for more">
-      <figure class="work-card tall" data-cat="beauty gifting"><img src="assets/kraft-tubes.jpg" alt="Kraft paper tubes with illustrated round labels" loading="lazy"><figcaption><strong>Kraft tubes</strong><span>Beauty</span></figcaption></figure>
-      <figure class="work-card wide" data-cat="ecommerce"><img src="assets/corrugated-shipping.jpg" alt="Corrugated shipping boxes with twine and kraft wrapping" loading="lazy"><figcaption><strong>Corrugated shippers</strong><span>Ecommerce</span></figcaption></figure>
-      <figure class="work-card" data-cat="food gifting"><img src="assets/coffee-carton.jpg" alt="Coffee gift carton with flowers" loading="lazy"><figcaption><strong>Coffee carton</strong><span>Food</span></figcaption></figure>
-      <figure class="work-card tall" data-cat="gifting"><img src="assets/rigid-stack-tag.jpg" alt="Stack of rigid kraft boxes with a thank you tag" loading="lazy"><figcaption><strong>Rigid gift stack</strong><span>Gifting</span></figcaption></figure>
-      <figure class="work-card" data-cat="retail"><img src="assets/paper-bag.jpg" alt="Kraft carry bag with tissue" loading="lazy"><figcaption><strong>Carry bag</strong><span>Retail</span></figcaption></figure>
-      <figure class="work-card" data-cat="ecommerce retail"><img src="assets/pouch-box.jpg" alt="Small kraft box holding a linen pouch" loading="lazy"><figcaption><strong>Jewellery box</strong><span>Retail</span></figcaption></figure>
-      <figure class="work-card" data-cat="beauty"><img src="assets/gift-box-tubes.jpg" alt="Gift box with two kraft tubes and wrapped soaps" loading="lazy"><figcaption><strong>Ritual kit</strong><span>Beauty</span></figcaption></figure>
-      <figure class="work-card" data-cat="ecommerce gifting"><img src="assets/thank-you-tags.jpg" alt="Hand stamping thank you tags next to kraft boxes" loading="lazy"><figcaption><strong>Tags and inserts</strong><span>Ecommerce</span></figcaption></figure>
-      <figure class="work-card" data-cat="gifting food"><img src="assets/gift-boxes-flowers.jpg" alt="Three kraft gift boxes on a glass table with flowers" loading="lazy"><figcaption><strong>Hamper boxes</strong><span>Gifting</span></figcaption></figure>
+      <figure class="work-card tall" data-cat="beauty gifting"><img src="assets/kraft-tubes.jpg" alt="Kraft paper tubes with illustrated round labels" loading="eager"><figcaption><strong>Kraft tubes</strong><span>Beauty</span></figcaption></figure>
+      <figure class="work-card wide" data-cat="ecommerce"><img src="assets/corrugated-shipping.jpg" alt="Corrugated shipping boxes with twine and kraft wrapping" loading="eager"><figcaption><strong>Corrugated shippers</strong><span>Ecommerce</span></figcaption></figure>
+      <figure class="work-card" data-cat="food gifting"><img src="assets/coffee-carton.jpg" alt="Coffee gift carton with flowers" loading="eager"><figcaption><strong>Coffee carton</strong><span>Food</span></figcaption></figure>
+      <figure class="work-card tall" data-cat="gifting"><img src="assets/rigid-stack-tag.jpg" alt="Stack of rigid kraft boxes with a thank you tag" loading="eager"><figcaption><strong>Rigid gift stack</strong><span>Gifting</span></figcaption></figure>
+      <figure class="work-card" data-cat="retail"><img src="assets/paper-bag.jpg" alt="Kraft carry bag with tissue" loading="eager"><figcaption><strong>Carry bag</strong><span>Retail</span></figcaption></figure>
+      <figure class="work-card" data-cat="ecommerce retail"><img src="assets/pouch-box.jpg" alt="Small kraft box holding a linen pouch" loading="eager"><figcaption><strong>Jewellery box</strong><span>Retail</span></figcaption></figure>
+      <figure class="work-card" data-cat="beauty"><img src="assets/gift-box-tubes.jpg" alt="Gift box with two kraft tubes and wrapped soaps" loading="eager"><figcaption><strong>Ritual kit</strong><span>Beauty</span></figcaption></figure>
+      <figure class="work-card" data-cat="ecommerce gifting"><img src="assets/thank-you-tags.jpg" alt="Hand stamping thank you tags next to kraft boxes" loading="eager"><figcaption><strong>Tags and inserts</strong><span>Ecommerce</span></figcaption></figure>
+      <figure class="work-card" data-cat="gifting food"><img src="assets/gift-boxes-flowers.jpg" alt="Three kraft gift boxes on a glass table with flowers" loading="eager"><figcaption><strong>Hamper boxes</strong><span>Gifting</span></figcaption></figure>
       <div class="work-empty" id="work-empty">Nothing here yet. <a href="#quote" data-open-quote>Tell us about yours</a>.</div>
     </div>
   </div>
@@ -619,79 +276,128 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 <section class="section bg-cream" id="process" aria-labelledby="process-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><span class="eyebrow">How it works</span><h2 id="process-title">Make a smart move</h2></div>
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2 id="process-title">Make a smart move</h2>
+      </div>
+      <p>From initial dieline sketch to dispatch in under three weeks. Zero surprise tooling charges.</p>
     </div>
     <div class="flow" role="list">
-      <div class="flow-mood reveal" role="listitem">
+      <div class="flow-mood start reveal" role="listitem">
+        <div class="mood-badge">Starting Point</div>
         <div class="mood-art">
           <svg viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="fw" cx="60" cy="68" r="30"/>
-            <path class="fbl" d="M31 62c1-22 57-22 58 0z"/><path d="M87 61h18"/>
-            <path d="M45 66l9-3M75 66l-9-3"/>
-            <circle class="fbl" cx="51" cy="74" r="2.5"/><circle class="fbl" cx="69" cy="74" r="2.5"/>
-            <path d="M50 89q10-8 20 0"/>
-            <path d="M14 34q0-10 8-10t8 8q0 6-8 8v5"/><circle class="fbl" cx="22" cy="51" r="1.6"/>
-            <path d="M94 18q0-7 6-7t6 6q0 4-6 6v4"/><circle class="fbl" cx="100" cy="32" r="1.4"/>
+            <circle class="fw" cx="60" cy="68" r="30"></circle>
+            <path class="fbl" d="M31 62c1-22 57-22 58 0z"></path><path d="M87 61h18"></path>
+            <path d="M45 66l9-3M75 66l-9-3"></path>
+            <circle class="fbl" cx="51" cy="74" r="2.5"></circle><circle class="fbl" cx="69" cy="74" r="2.5"></circle>
+            <path d="M50 89q10-8 20 0"></path>
+            <path d="M14 34q0-10 8-10t8 8q0 6-8 8v5"></path><circle class="fbl" cx="22" cy="51" r="1.6"></circle>
+            <path d="M94 18q0-7 6-7t6 6q0 4-6 6v4"></path><circle class="fbl" cx="100" cy="32" r="1.4"></circle>
           </svg>
         </div>
-        <span>Sad &amp; confused</span>
+        <strong>Sad &amp; confused</strong>
+        <p class="mood-desc">High MOQs, unclear pricing &amp; unknown box board quality.</p>
       </div>
-      <svg class="flow-arrow" viewBox="0 0 48 16" aria-hidden="true"><path d="M2 8h36" stroke-dasharray="4 6"/><path d="m34 3 6 5-6 5"/></svg>
+
       <div class="flow-step reveal" role="listitem">
-        <div class="flow-art"><span class="flow-num">1</span>
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <rect class="fb" x="49" y="26" width="26" height="12" rx="3"/>
-            <rect class="fw" x="44" y="38" width="36" height="54" rx="8"/>
-            <path d="M44 56h36M44 74h36"/>
-            <path d="M30 38v54M26 42l4-4 4 4M26 88l4 4 4-4"/>
-            <path d="M44 104h36M48 100l-4 4 4 4M76 100l4 4-4 4"/>
-          </svg>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="flow-num">1</span>
+            <span class="step-pill">Day 01 · Intake</span>
+          </div>
+          <div class="flow-art">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <rect class="fb" x="49" y="26" width="26" height="12" rx="3"></rect>
+              <rect class="fw" x="44" y="38" width="36" height="54" rx="8"></rect>
+              <path d="M44 56h36M44 74h36"></path>
+              <path d="M30 38v54M26 42l4-4 4 4M26 88l4 4 4-4"></path>
+              <path d="M44 104h36M48 100l-4 4 4 4M76 100l4 4-4 4"></path>
+            </svg>
+          </div>
+          <h3>Tell us what you’re packing</h3>
+          <p class="step-desc">Share product dimensions, weights, or photos. We recommend the exact board grade, liner, and dieline structure for your budget.</p>
+          <ul class="step-perks">
+            <li><i class="ph-bold ph-check"></i> 4-hour quote response</li>
+            <li><i class="ph-bold ph-check"></i> Free CAD dieline template</li>
+          </ul>
         </div>
-        <h3>Tell us what you’re packing</h3>
       </div>
-      <svg class="flow-arrow" viewBox="0 0 48 16" aria-hidden="true"><path d="M2 8h36" stroke-dasharray="4 6"/><path d="m34 3 6 5-6 5"/></svg>
+
       <div class="flow-step reveal" role="listitem">
-        <div class="flow-art"><span class="flow-num">2</span>
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <path class="fw" d="M30 58 20 42h36l4 16z"/>
-            <path class="fw" d="M90 58l10-16H64l-4 16z"/>
-            <rect class="fb" x="30" y="58" width="60" height="38" rx="2"/>
-            <path d="M30 58h60"/>
-            <circle class="fbl" cx="88" cy="30" r="13"/>
-            <path class="sw" d="m82 30 4 4 8-8"/>
-          </svg>
+        <div class="step-card featured">
+          <div class="step-highlight-tag">Zero Risk</div>
+          <div class="step-head">
+            <span class="flow-num">2</span>
+            <span class="step-pill">Days 03–05 · Prototype</span>
+          </div>
+          <div class="flow-art">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <path class="fw" d="M30 58 20 42h36l4 16z"></path>
+              <path class="fw" d="M90 58l10-16H64l-4 16z"></path>
+              <rect class="fb" x="30" y="58" width="60" height="38" rx="2"></rect>
+              <path d="M30 58h60"></path>
+              <circle class="fbl" cx="88" cy="30" r="13"></circle>
+              <path class="sw" d="m82 30 4 4 8-8"></path>
+            </svg>
+          </div>
+          <h3>Hold the free sample</h3>
+          <p class="step-desc">We cut a structural sample in your custom sizing and courier it directly to your desk. Test fit your actual bottles, jars, or garments first.</p>
+          <ul class="step-perks">
+            <li><i class="ph-bold ph-check"></i> 100% free physical sample</li>
+            <li><i class="ph-bold ph-check"></i> Shipped in 3–5 working days</li>
+          </ul>
         </div>
-        <h3>Hold the free sample</h3>
       </div>
-      <svg class="flow-arrow" viewBox="0 0 48 16" aria-hidden="true"><path d="M2 8h36" stroke-dasharray="4 6"/><path d="m34 3 6 5-6 5"/></svg>
+
       <div class="flow-step reveal" role="listitem">
-        <div class="flow-art"><span class="flow-num">3</span>
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <rect class="fb" x="22" y="40" width="50" height="40" rx="3"/>
-            <path class="fw" d="M72 54h18l10 13v13H72z"/>
-            <path d="M78 60h10l5 7H78z"/>
-            <circle class="fw" cx="40" cy="84" r="7"/>
-            <circle class="fw" cx="86" cy="84" r="7"/>
-            <path d="M6 52h10M2 62h14M8 72h8"/>
-          </svg>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="flow-num">3</span>
+            <span class="step-pill">Days 12–18 · Dispatch</span>
+          </div>
+          <div class="flow-art">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <rect class="fb" x="22" y="40" width="50" height="40" rx="3"></rect>
+              <path class="fw" d="M72 54h18l10 13v13H72z"></path>
+              <path d="M78 60h10l5 7H78z"></path>
+              <circle class="fw" cx="40" cy="84" r="7"></circle>
+              <circle class="fw" cx="86" cy="84" r="7"></circle>
+              <path d="M6 52h10M2 62h14M8 72h8"></path>
+            </svg>
+          </div>
+          <h3>You approve, we produce</h3>
+          <p class="step-desc">Once you give the green light, automated offset printing and die-cutting spin up with water-based non-toxic inks and FSC board.</p>
+          <ul class="step-perks">
+            <li><i class="ph-bold ph-check"></i> Low 250 unit minimums</li>
+            <li><i class="ph-bold ph-check"></i> Tracked nationwide courier</li>
+          </ul>
         </div>
-        <h3>You approve, we produce</h3>
       </div>
-      <svg class="flow-arrow" viewBox="0 0 48 16" aria-hidden="true"><path d="M2 8h36" stroke-dasharray="4 6"/><path d="m34 3 6 5-6 5"/></svg>
-      <div class="flow-mood reveal" role="listitem">
+
+      <div class="flow-mood end reveal" role="listitem">
+        <div class="mood-badge success">Goal</div>
         <div class="mood-art">
           <svg viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="fw" cx="60" cy="68" r="30"/>
-            <path class="fbl" d="M31 62c1-22 57-22 58 0z"/><path d="M87 61h18"/>
-            <rect class="fbl" x="40" y="67" width="17" height="11" rx="4"/><rect class="fbl" x="63" y="67" width="17" height="11" rx="4"/><path d="M57 71h6"/>
-            <path d="M47 86q13 12 26 0"/>
-            <path d="M16 30v10M11 35h10M100 20v8M96 24h8M104 44v6M101 47h6"/>
+            <circle class="fw" cx="60" cy="68" r="30"></circle>
+            <path class="fbl" d="M31 62c1-22 57-22 58 0z"></path><path d="M87 61h18"></path>
+            <rect class="fbl" x="40" y="67" width="17" height="11" rx="4"></rect><rect class="fbl" x="63" y="67" width="17" height="11" rx="4"></rect><path d="M57 71h6"></path>
+            <path d="M47 86q13 12 26 0"></path>
+            <path d="M16 30v10M11 35h10M100 20v8M96 24h8M104 44v6M101 47h6"></path>
           </svg>
         </div>
-        <span>Happy</span>
+        <strong>Happy</strong>
+        <p class="mood-desc">Perfect fit, premium unboxing &amp; delighted return customers.</p>
       </div>
     </div>
-    <div class="flow-cta reveal"><button class="btn btn-primary btn-lg" data-open-quote>Start with a free quote <i class="ph ph-arrow-right"></i></button></div>
+    <div class="flow-cta reveal">
+      <button class="btn btn-primary btn-lg" data-open-quote>Start with a free quote <i class="ph ph-arrow-right"></i></button>
+      <div class="process-guarantees">
+        <span><i class="ph-fill ph-check-circle"></i> Free Structural Sample</span>
+        <span><i class="ph-fill ph-check-circle"></i> No Die or Tooling Fees</span>
+        <span><i class="ph-fill ph-check-circle"></i> Pan-India Doorstep Delivery</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -719,18 +425,16 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
       <h2 id="faq-title">Questions people have asked us</h2>
       <div class="faq-call">
         <svg class="caller" viewBox="0 0 160 170" aria-hidden="true">
-          <path class="fb" d="M34 168c4-30 26-44 46-44s42 14 46 44z"/>
-          <circle class="fw" cx="80" cy="78" r="38"/>
-          <path class="fbl" d="M42 72c2-28 74-28 76 0z"/><path d="M42 71H20"/>
-          <circle cx="66" cy="84" r="10"/><circle cx="94" cy="84" r="10"/><path d="M76 84h8"/>
-          <circle class="fbl" cx="67" cy="85" r="2.5"/><circle class="fbl" cx="93" cy="84" r="2.5"/>
-          <path d="M70 104q5-4 10 0t10 0"/>
-          <rect class="fbl" x="114" y="62" width="13" height="30" rx="4" transform="rotate(14 120 77)"/>
-          <path class="fb" d="M118 96c8 2 14 8 14 16l-6 10c-6-2-12-8-13-15z"/>
-          <path d="M136 26q0-10 8-10t8 8q0 6-8 8v5"/><circle class="fbl" cx="144" cy="43" r="1.6"/>
+          <path class="fb" d="M34 168c4-30 26-44 46-44s42 14 46 44z"></path>
+          <circle class="fw" cx="80" cy="78" r="38"></circle>
+          <path class="fbl" d="M42 72c2-28 74-28 76 0z"></path><path d="M42 71H20"></path>
+          <circle cx="66" cy="84" r="10"></circle><circle cx="94" cy="84" r="10"></circle><path d="M76 84h8"></path>
+          <circle class="fbl" cx="67" cy="85" r="2.5"></circle><circle class="fbl" cx="93" cy="84" r="2.5"></circle>
+          <path d="M70 104q5-4 10 0t10 0"></path>
+          <rect class="fbl" x="114" y="62" width="13" height="30" rx="4" transform="rotate(14 120 77)"></rect>
+          <path class="fb" d="M118 96c8 2 14 8 14 16l-6 10c-6-2-12-8-13-15z"></path>
+          <path d="M136 26q0-10 8-10t8 8q0 6-8 8v5"></path><circle class="fbl" cx="144" cy="43" r="1.6"></circle>
         </svg>
-        <p class="faq-still">Still have a question?</p>
-        <a class="btn btn-primary btn-lg" href="tel:+919810512657"><i class="ph ph-phone"></i> Call us now 98105 12657</a>
       </div>
     </div>
     <div class="faq-list reveal">
@@ -743,15 +447,53 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
   </div>
 </section>
 
+<!-- SEPARATE STILL HAVE A QUESTION BANNER BELOW FAQS -->
+<div class="faq-cta-banner-wrap reveal">
+  <div class="wrap">
+    <div class="faq-cta-banner">
+      <h3 class="faq-banner-title">Still have a question?</h3>
+      <a class="btn btn-banner-call" href="tel:+919810512657">
+        <i class="ph-bold ph-phone"></i>
+        <span>Call us now 98105 12657</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- CONTACT / FINAL CTA -->
 <section class="section bg-cream contact" id="quote" aria-labelledby="quote-title">
   <div class="wrap contact-grid">
-    <div class="reveal">
+    <div class="reveal contact-left-col">
       <h2 id="quote-title">Let’s make your box.</h2>
       <p class="lead">We reply within 4 working hours.</p>
+
       <div class="direct">
         <a href="tel:+919810512657"><i class="ph ph-phone"></i><div><small>Call</small><strong>+91 98105 12657</strong></div></a>
         <a href="mailto:hello@cartonne.in?subject=Packaging%20enquiry"><i class="ph ph-envelope-simple"></i><div><small>Email</small><strong>hello@cartonne.in</strong></div></a>
+      </div>
+
+      <!-- Workshop Studio Visual & Quality Guarantee -->
+      <div class="contact-studio-card">
+        <div class="studio-photo">
+          <img src="assets/hero-mailer-unboxing.jpg" alt="Cartonne precision crafted packaging boxes" width="600" height="340">
+          <div class="studio-tag"><i class="ph-fill ph-seal-check"></i> 100% Structural Guarantee</div>
+        </div>
+        <div class="studio-perks">
+          <div class="perk-box">
+            <i class="ph-bold ph-package"></i>
+            <div>
+              <strong>Sample Before Paying</strong>
+              <span>Custom CAD dieline cut and mailed in 3-5 days</span>
+            </div>
+          </div>
+          <div class="perk-box">
+            <i class="ph-bold ph-truck"></i>
+            <div>
+              <strong>Doorstep Delivery Across India</strong>
+              <span>Protected corner palletization &amp; tracked dispatch</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="form-card reveal" id="main-form-card">
@@ -774,11 +516,11 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
           <div class="err"><i class="ph ph-warning-circle"></i>Pick a format.</div>
         </div>
         <div class="field"><label for="m-qty">Quantity</label>
-          <select class="input" id="m-qty" name="qty" required><option value="">Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
+          <select class="input" id="m-qty" name="qty" required><option value>Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
           <div class="err"><i class="ph ph-warning-circle"></i>Choose a range.</div></div>
         <button class="btn btn-primary submit" type="submit"><span class="label">Get my quote</span> <i class="ph ph-arrow-right"></i></button>
-      </form>
-      <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Request received</h3><p class="success-msg">We will call you within 4 working hours.</p><button class="btn btn-ghost reset-form" type="button">Send another</button></div>
+      <p class="form-sub">This form prepares an email. Send it in your email app to request your quote.</p></form>
+      <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Request prepared</h3><p class="success-msg">Send your details by email to request a callback.</p><button class="btn btn-ghost reset-form" type="button">Send another</button></div>
     </div>
   </div>
 </section>
@@ -788,7 +530,7 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="#top" aria-label="Cartonne home"><img src="assets/brand/logo-horizontal-white.png" alt="Cartonne" width="463" height="96"></a>
+        <a class="brand" href="#top" aria-label="Cartonne home"><img src="assets/brand/logo-horizontal-blue.png" alt="Cartonne" width="463" height="96"></a>
         <p>The right box, for every product.</p>
       </div>
       <div><h4>Products</h4><ul><li><a href="#products">Mailer boxes</a></li><li><a href="#products">Rigid boxes</a></li><li><a href="#products">Mono cartons</a></li><li><a href="#products">Paper bags</a></li></ul></div>
@@ -810,7 +552,7 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 
 <!-- QUOTE DRAWER -->
 <div class="drawer-backdrop" data-close-quote></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true" inert>
   <button class="drawer-close" data-close-quote aria-label="Close quote form"><i class="ph ph-x"></i></button>
   <div class="form-card">
     <h3 id="drawer-title">Get a free quote</h3>
@@ -830,177 +572,21 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
         <div class="err"><i class="ph ph-warning-circle"></i>Pick a format.</div>
       </div>
       <div class="field"><label for="d-qty">Quantity</label>
-        <select class="input" id="d-qty" name="qty" required><option value="">Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
+        <select class="input" id="d-qty" name="qty" required><option value>Select a range</option><option>250 to 500</option><option>500 to 1,000</option><option>1,000 to 5,000</option><option>5,000 or more</option></select>
         <div class="err"><i class="ph ph-warning-circle"></i>Choose a range.</div></div>
       <button class="btn btn-primary submit" type="submit"><span class="label">Get my quote</span> <i class="ph ph-arrow-right"></i></button>
-    </form>
-    <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Request received</h3><p class="success-msg">We will call you within 4 working hours.</p><button class="btn btn-primary" type="button" data-close-quote>Done</button></div>
+    <p class="form-sub">This form prepares an email. Send it in your email app to request your quote.</p></form>
+    <div class="success" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>Request prepared</h3><p class="success-msg">Send your details by email to request a callback.</p><button class="btn btn-primary" type="button" data-close-quote>Done</button></div>
     <div class="call-alt"><i class="ph-fill ph-phone"></i><span>Or call <a href="tel:+919810512657">+91 98105 12657</a></span></div>
   </div>
 </aside>
 
 <div class="toast" id="toast" role="status" aria-live="polite"><i class="ph-fill ph-check-circle"></i><span></span></div>
 
-<script>
-(function(){
-  var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
-  var root=document.documentElement,body=document.body;
-  $('#yr').textContent=new Date().getFullYear();
 
-  /* header shadow + mobile bar */
-  var header=$('#header'),mbar=$('#mbar'),hero=$('.hero');
-  new IntersectionObserver(function(e){
-    var past=!e[0].isIntersecting;mbar.classList.toggle('show',past);
-  },{rootMargin:'-60% 0px 0px 0px'}).observe(hero);
-  var ticking=false;
-  addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){header.classList.toggle('scrolled',scrollY>40);ticking=false;tagline();});},{passive:true});
 
-  /* mobile menu */
-  var menuBtn=$('.menu-btn'),mm=$('#mobile-menu');
-  function setMenu(open){
-    body.classList.toggle('menu-open',open);menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');mm.setAttribute('aria-hidden',!open);
-    $$('a,button',mm).forEach(function(a,i){a.style.transitionDelay=open?Math.min(i*60,400)+'ms':'0ms'});
-    body.style.overflow=open?'hidden':'';
-  }
-  menuBtn.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});
-  $$('a',mm).forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 
-  /* active nav */
-  var links=$$('.nav a');
-  var secObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
-  ['products','work','process','faq','quote'].forEach(function(id){secObs.observe(document.getElementById(id))});
 
-  /* drawer */
-  var drawer=$('#drawer'),lastFocus=null;
-  function openQuote(type){
-    if(body.classList.contains('menu-open'))setMenu(false);
-    lastFocus=document.activeElement;
-    var card=$('.form-card',drawer);
-    if(card.classList.contains('form-done'))resetForm(card);
-    if(type){var r=$('input[name=type][value="'+type+'"]',drawer);if(r)r.checked=true;}
-    body.classList.add('drawer-open');drawer.setAttribute('aria-hidden','false');body.style.overflow='hidden';
-    setTimeout(function(){$('#d-name').focus()},350);
-  }
-  function closeQuote(){body.classList.remove('drawer-open');drawer.setAttribute('aria-hidden','true');body.style.overflow='';if(lastFocus)lastFocus.focus();}
-  $$('[data-open-quote]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openQuote(b.getAttribute('data-type'))})});
-  $$('[data-close-quote]').forEach(function(b){b.addEventListener('click',closeQuote)});
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'){if(body.classList.contains('drawer-open'))closeQuote();else if(body.classList.contains('menu-open'))setMenu(false);}
-    if(e.key==='Tab'&&body.classList.contains('drawer-open')){
-      var f=$$('button,a,input,select,textarea',drawer).filter(function(x){return x.offsetParent!==null});
-      if(!f.length)return;var first=f[0],last=f[f.length-1];
-      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
-    }
-  });
 
-  /* forms */
-  function digits(v){v=v.replace(/\D/g,'');if(v.length===12&&v.indexOf('91')===0)v=v.slice(2);if(v.length===11&&v[0]==='0')v=v.slice(1);return v}
-  function checkField(field){
-    var input=$('input,select,textarea',field);if(!input||!input.required)return true;
-    var ok;
-    if(input.type==='radio'){ok=!!$('input:checked',field)}
-    else if(input.dataset.type==='phone'){ok=/^[6-9]\d{9}$/.test(digits(input.value))}
-    else if(input.type==='email'){ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value.trim())}
-    else ok=input.value.trim().length>1||(input.tagName==='SELECT'&&input.value!=='');
-    field.classList.toggle('invalid',!ok);
-    $$('input,select,textarea',field).forEach(function(i){i.setAttribute('aria-invalid',!ok)});
-    return ok;
-  }
-  function progress(form){
-    var card=form.closest('.form-card'),bar=$('.progress .bar i',card);if(!bar)return;
-    var req=$$('.field',form).filter(function(f){var i=$('input,select,textarea',f);return i&&i.required});
-    var done=req.filter(function(f){var i=$('input,select,textarea',f);if(i.type==='radio')return !!$('input:checked',f);if(i.dataset.type==='phone')return /^[6-9]\d{9}$/.test(digits(i.value));if(i.type==='email')return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim());return i.value.trim()!==''}).length;
-    var p=Math.round(done/req.length*100);bar.style.transform='scaleX('+(p/100)+')';$('.pct',card).textContent=p+'% complete';
-  }
-  function resetForm(card){var f=$('form',card);f.reset();$$('.field',f).forEach(function(x){x.classList.remove('invalid')});card.classList.remove('form-done');progress(f);}
-  $$('.lead-form').forEach(function(form){
-    var card=form.closest('.form-card');
-    $$('.field',form).forEach(function(field){
-      $$('input,select,textarea',field).forEach(function(i){
-        i.addEventListener('blur',function(){if(i.value||field.classList.contains('invalid'))checkField(field)});
-        i.addEventListener('input',function(){if(field.classList.contains('invalid'))checkField(field);progress(form)});
-        i.addEventListener('change',function(){if(field.classList.contains('invalid'))checkField(field);progress(form)});
-      });
-    });
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var fields=$$('.field',form),bad=fields.filter(function(f){return !checkField(f)});
-      if(bad.length){var i=$('input,select,textarea',bad[0]);i.focus();return}
-      var btn=$('.submit',form),lbl=$('.label',btn),data=new FormData(form);
-      btn.setAttribute('aria-busy','true');lbl.textContent='Sending';
-      setTimeout(function(){
-        btn.removeAttribute('aria-busy');lbl.textContent='Get my quote';
-        var name=(data.get('name')||'').trim().split(' ')[0];
-        $('.success-msg',card).textContent='Thanks, '+name+'. We will call +91 '+digits(data.get('phone'))+' within 4 working hours.';
-        card.classList.add('form-done');
-        try{localStorage.setItem('cartonne_lead',JSON.stringify({name:name,type:data.get('type'),at:Date.now()}))}catch(err){}
-      },1100);
-    });
-    var r=$('.reset-form',card);if(r)r.addEventListener('click',function(){resetForm(card)});
-  });
 
-  /* work filter */
-  var cards=$$('.work-card'),tabs=$$('.tab'),empty=$('#work-empty');
-  tabs.forEach(function(t){
-    var f=t.dataset.filter,n=f==='all'?cards.length:cards.filter(function(c){return c.dataset.cat.split(' ').indexOf(f)>-1}).length;
-    t.insertAdjacentHTML('beforeend','<span class="n">'+n+'</span>');
-    t.addEventListener('click',function(){
-      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
-      var shown=0;
-      cards.forEach(function(c){var on=f==='all'||c.dataset.cat.split(' ').indexOf(f)>-1;c.classList.toggle('is-hidden',!on);c.classList.remove('is-in');if(on){shown++;void c.offsetWidth;c.classList.add('is-in')}});
-      empty.style.display=shown?'none':'block';
-      var g=$('#work-grid');if(g._rebuild)g._rebuild();
-    });
-  });
-
-  /* swipe carousels (phone width) */
-  var mq=matchMedia('(max-width:640px)');
-  $$('.swipe').forEach(function(track){
-    var dots=document.createElement('div');dots.className='dots';dots.setAttribute('aria-label','Choose slide');track.after(dots);
-    function items(){return $$(':scope>*',track).filter(function(c){return c.offsetParent!==null&&!c.classList.contains('work-empty')})}
-    function build(){
-      var list=items();dots.innerHTML='';
-      list.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show item '+(i+1)+' of '+list.length);
-        b.addEventListener('click',function(){track.scrollTo({left:c.offsetLeft-track.offsetLeft-parseFloat(getComputedStyle(track).paddingLeft),behavior:'smooth'})});dots.appendChild(b)});
-      sync();
-    }
-    function sync(){
-      var list=items(),pad=parseFloat(getComputedStyle(track).paddingLeft),x=track.scrollLeft,best=0,d=1e9;
-      list.forEach(function(c,i){var dd=Math.abs(c.offsetLeft-track.offsetLeft-pad-x);if(dd<d){d=dd;best=i}});
-      if(track.scrollLeft+track.clientWidth>=track.scrollWidth-4)best=list.length-1;
-      $$('button',dots).forEach(function(b,i){b.setAttribute('aria-current',i===best)});
-    }
-    var t=false;track.addEventListener('scroll',function(){if(t)return;t=true;requestAnimationFrame(function(){sync();t=false})},{passive:true});
-    track._rebuild=function(){track.scrollLeft=0;build()};
-    (mq.addEventListener?mq.addEventListener('change',build):mq.addListener(build));
-    build();
-  });
-
-  /* reveal */
-  var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px',threshold:.08});
-  $$('.reveal').forEach(function(el,i){
-    var sib=el.parentElement?$$('.reveal',el.parentElement).indexOf(el):0;
-    el.style.transitionDelay=(Math.max(sib,0)%5)*60+'ms';rv.observe(el);
-  });
-
-  /* tagline word reveal */
-  var tl=$('#tagline');
-  (function split(){
-    var out='';
-    tl.childNodes.forEach(function(n){
-      var accent=n.nodeType===1,txt=n.textContent;
-      txt.split(/(\s+)/).forEach(function(w){if(!w.trim()){out+=w;return}out+='<span class="w'+(accent?' accent':'')+'">'+w+'</span>'});
-    });
-    tl.innerHTML=out;
-  })();
-  var words=$$('.w',tl);
-  function tagline(){
-    var line=innerHeight*0.72;
-    for(var i=0;i<words.length;i++){var r=words[i].getBoundingClientRect();words[i].classList.toggle('on',r.top<line)}
-  }
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){words.forEach(function(w){w.classList.add('on')})}
-  tagline();
-})();
-</script>
-</body>
-</html>
+<script type="module" src="app.js"></script></body></html>
