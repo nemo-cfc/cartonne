@@ -3,10 +3,7 @@
 Static website based on the supplied Cartonne HTML design. Serve this repository with any static HTTP server; no build step or API key is required. Relative asset paths support both root domains and GitHub Pages project paths.
 
 - `index.html`: page content and metadata.
-- `styles.css`: the page's layout and components, redesigned with the Hallmark skill (`.claude/skills/hallmark`); its first lines record the design decisions.
-- `tokens.css`: the Cartonne colours, faces, type scale and spacing as CSS variables.
-- `base.css`: shared base rules (focus rings, overflow, reduced motion).
-- `.hallmark/`: the redesign's log and the before record that `sloplint --kept` checks against.
+- `styles.css`: supplied design and final responsive overrides.
 - `app.js`: mobile navigation, quote drawer, forms, carousel, gallery filters, swipe indicators and animations.
 - `assets/`: local imagery and brand files.
 
