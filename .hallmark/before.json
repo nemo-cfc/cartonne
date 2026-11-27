@@ -1,0 +1,338 @@
+{
+ "v": 1,
+ "at": "2026-11-27T12:52:29.596Z",
+ "scope": "page",
+ "summary": {
+  "fails": 4,
+  "reflex": 91,
+  "warns": 31
+ },
+ "files": {
+  "index.html": {
+   "handlers": [],
+   "links": [
+    "#faq",
+    "#main",
+    "#process",
+    "#products",
+    "#quote",
+    "#reviews",
+    "#top",
+    "#work",
+    "legal.html#privacy",
+    "legal.html#terms",
+    "mailto:hello@cartonne.in",
+    "mailto:hello@cartonne.in?subject=Packaging%20enquiry",
+    "tel:+919810512657"
+   ],
+   "fields": [
+    "email",
+    "name",
+    "phone",
+    "qty",
+    "type"
+   ],
+   "hooks": [],
+   "ids": [
+    "d-name",
+    "d-phone",
+    "d-qty",
+    "d-type-l",
+    "drawer",
+    "drawer-title",
+    "faq",
+    "faq-title",
+    "header",
+    "hero-slider",
+    "hero-title",
+    "live-slide-format",
+    "live-slide-price",
+    "live-slide-spec",
+    "m-email",
+    "m-name",
+    "m-phone",
+    "m-qty",
+    "m-type-l",
+    "main",
+    "main-form-card",
+    "mbar",
+    "mobile-menu",
+    "process",
+    "process-title",
+    "products",
+    "products-title",
+    "quote",
+    "quote-title",
+    "reviews",
+    "slider-dots",
+    "slider-next",
+    "slider-prev",
+    "tagline",
+    "toast",
+    "top",
+    "work",
+    "work-empty",
+    "work-grid",
+    "work-title",
+    "yr"
+   ],
+   "scripts": [
+    "app.js"
+   ]
+  }
+ },
+ "wiring": {
+  "handlers": [],
+  "links": [
+   "#faq",
+   "#main",
+   "#process",
+   "#products",
+   "#quote",
+   "#reviews",
+   "#top",
+   "#work",
+   "legal.html#privacy",
+   "legal.html#terms",
+   "mailto:hello@cartonne.in",
+   "mailto:hello@cartonne.in?subject=Packaging%20enquiry",
+   "tel:+919810512657"
+  ],
+  "fields": [
+   "email",
+   "name",
+   "phone",
+   "qty",
+   "type"
+  ],
+  "hooks": [],
+  "ids": [
+   "d-name",
+   "d-phone",
+   "d-qty",
+   "d-type-l",
+   "drawer",
+   "drawer-title",
+   "faq",
+   "faq-title",
+   "header",
+   "hero-slider",
+   "hero-title",
+   "live-slide-format",
+   "live-slide-price",
+   "live-slide-spec",
+   "m-email",
+   "m-name",
+   "m-phone",
+   "m-qty",
+   "m-type-l",
+   "main",
+   "main-form-card",
+   "mbar",
+   "mobile-menu",
+   "process",
+   "process-title",
+   "products",
+   "products-title",
+   "quote",
+   "quote-title",
+   "reviews",
+   "slider-dots",
+   "slider-next",
+   "slider-prev",
+   "tagline",
+   "toast",
+   "top",
+   "work",
+   "work-empty",
+   "work-grid",
+   "work-title",
+   "yr"
+  ]
+ },
+ "scripts": {
+  "index.html": {
+   "queried": [
+    "#hero-slider",
+    "#live-slide-format",
+    "#live-slide-price",
+    "#live-slide-spec",
+    "#slider-next",
+    "#slider-prev",
+    ".form-card",
+    ".hero-slide",
+    ".s-dot"
+   ],
+   "hooked": [
+    "#hero-slider",
+    "#live-slide-format",
+    "#live-slide-price",
+    "#live-slide-spec",
+    "#slider-next",
+    "#slider-prev",
+    ".form-card",
+    ".hero-slide",
+    ".s-dot"
+   ],
+   "dom": [
+    "#hero-slider",
+    "#live-slide-format",
+    "#live-slide-price",
+    "#live-slide-spec",
+    "#slider-next",
+    "#slider-prev",
+    ".form-card",
+    ".hero-slide",
+    ".s-dot"
+   ],
+   "hides": true
+  }
+ },
+ "pages": {
+  "index.html": {
+   "links": [
+    "#main",
+    "#top",
+    "#products",
+    "#work",
+    "#process",
+    "#faq",
+    "tel:+919810512657",
+    "#quote",
+    "mailto:hello@cartonne.in?subject=Packaging%20enquiry",
+    "#reviews",
+    "mailto:hello@cartonne.in",
+    "legal.html#privacy",
+    "legal.html#terms"
+   ],
+   "fields": [
+    "name",
+    "phone",
+    "email",
+    "type",
+    "qty"
+   ],
+   "actions": [],
+   "forms": [
+    {
+     "key": "form 1",
+     "attrs": [
+      "method=get",
+      "novalidate"
+     ],
+     "fields": [
+      "name",
+      "phone",
+      "email",
+      "type",
+      "qty"
+     ],
+     "hidden": [],
+     "submits": 1,
+     "controls": [
+      "input[name=name]",
+      "input[type=tel][name=phone]",
+      "input[type=email][name=email]",
+      "input[type=radio][name=type]",
+      "select[name=qty]",
+      "button[type=submit]"
+     ]
+    },
+    {
+     "key": "form 2",
+     "attrs": [
+      "method=get",
+      "novalidate"
+     ],
+     "fields": [
+      "name",
+      "phone",
+      "type",
+      "qty"
+     ],
+     "hidden": [],
+     "submits": 1,
+     "controls": [
+      "input[name=name]",
+      "input[type=tel][name=phone]",
+      "input[type=radio][name=type]",
+      "select[name=qty]",
+      "button[type=submit]"
+     ]
+    }
+   ],
+   "hooked": [
+    "#hero-slider",
+    "#live-slide-format",
+    "#live-slide-price",
+    "#live-slide-spec",
+    "#slider-next",
+    "#slider-prev",
+    ".form-card",
+    ".hero-slide",
+    ".s-dot"
+   ],
+   "headings": [
+    "the right box, for every product.",
+    "pick a format. we will size it to your product.",
+    "mailer boxes",
+    "rigid boxes",
+    "mono cartons",
+    "paper bags",
+    "custom builds",
+    "ideas for your next box",
+    "make a smart move",
+    "tell us what you’re packing",
+    "hold the free sample",
+    "you approve, we produce",
+    "questions people have asked us",
+    "still have a question?",
+    "let’s make your box.",
+    "request a free quote",
+    "request prepared",
+    "products",
+    "company",
+    "contact",
+    "get a free quote"
+   ],
+   "figures": [
+    "5days",
+    "18.40",
+    "387+",
+    "64.50",
+    "6.85",
+    "11.20",
+    "100%",
+    "1day",
+    "2days",
+    "3days",
+    "2019",
+    "98.6%",
+    "9810512657",
+    "+919810512657",
+    "1,000",
+    "5,000",
+    "2026"
+   ],
+   "images": [
+    "logo-horizontal-blue.png",
+    "brand-2.png",
+    "brand-3.png",
+    "kraft-tubes.jpg",
+    "coffee-carton.jpg",
+    "mailer-stack.jpg",
+    "rigid-boxes.jpg",
+    "paper-bag.jpg",
+    "gift-box-tubes.jpg",
+    "corrugated-shipping.jpg",
+    "rigid-stack-tag.jpg",
+    "pouch-box.jpg",
+    "thank-you-tags.jpg",
+    "gift-boxes-flowers.jpg",
+    "hero-mailer-unboxing.jpg"
+   ],
+   "controls": 45,
+   "words": 677
+  }
+ }
+}

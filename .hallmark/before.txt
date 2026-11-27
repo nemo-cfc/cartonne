@@ -1,0 +1,126 @@
+FAIL 34 index.html:1 [375px] p runs 29px past the 375 screen, hidden only by the page's clip | fix: Stack it under 60rem: drop the desktop column gap, widths and offsets on the phone
+FAIL 40 index.html:1 [1440px] a field's edge is under 3:1 against what surrounds it: input.input 1.48:1, input.input 1.48:1, input.input 1.4… | fix: Draw the field in --color-muted, or fill it a step off the surface it sits on
+FAIL 58 index.html:1 [1440px] 162 words on one screen (from y=3350) | fix: One idea per screen: cut to about 80 words, make the section an object
+FAIL 58 index.html:1 [1440px] hero carries 3 text blocks before its actions | fix: Headline, one sentence, actions; delete the rest
+REFLEX 7b styles.css:30 pure #fff: background: var(--paper) (body) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:30 pure #000: color: var(--ink) (body) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:40 pure #fff: color: var(--white) (.skip) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:50 pure #fff: color: var(--white) (.btn-primary) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:53 pure #000: color: var(--ink) (.btn-ghost) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:72 pure #000: color: var(--ink) (.nav a[aria-current=true]) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:78 pure #000: background: var(--ink) (.menu-btn span) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:122 pure #fff: background: var(--paper) (.product) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:139 pure #000: color: var(--ink) (.tagline .w.on) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:144 pure #fff: background: var(--paper) (.tab) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:145 pure #000: color: var(--ink) (.tab:hover) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:147 pure #fff: color: var(--white) (.tab[aria-selected=true]) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:165 pure #fff: color: var(--white) (.proof-band) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:175 pure #000: color: var(--black) (.quote figcaption .av) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:195 pure #fff: background: var(--paper) (.direct a) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:196 pure #fff: background: var(--white) (.direct a:hover) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:202 pure #fff: background: var(--paper) (.form-card) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:209 pure #fff: background: var(--white) (.input) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:219 pure #fff: background: var(--white) (.chip span) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:222 pure #fff: color: var(--white) (.chip input:checked+span) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:237 pure #fff: background: var(--paper) (.drawer) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:254 pure #fff: color: var(--white) (.footer h4) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:257 pure #fff: color: var(--white) (.footer a:hover) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:268 pure #000: background: var(--ink) (.toast) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:268 pure #fff: color: var(--white) (.toast) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:352 pure #fff: background: var(--white) (.hl-ico) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:372 pure #fff: background: var(--white) (.flow-art) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:376 pure #fff: color: var(--white) (.flow-num) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:420 pure #000: color: var(--ink) (.client:hover) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:436 pure #000: color: var(--ink) (.faq-still) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:499 pure #fff: background: var(--white) (.btn-ghost) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:532 pure #fff: background: var(--white) (.hl-ico) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:545 pure #fff: background: var(--white) (.client) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:558 pure #fff: background: var(--white) (.product) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:604 pure #fff: background: var(--white) (.tab) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:671 pure #fff: color: var(--white) (.quote.feature-quote blockquote) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:694 pure #fff: background: var(--white) (.form-card) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:801 pure #fff: background: var(--white) (.flow-step:hover .flow-art) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:812 pure #fff: color: var(--white) (.flow-num) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:859 pure #fff: background: var(--white) (.flow-mood span) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:868 pure #fff: background: var(--white) (.mood-art) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:953 pure #fff: background: var(--white) (.flow-mood .mood-art) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:981 pure #fff: background: var(--white) (.step-card) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1004 pure #fff: color: var(--white) (.step-highlight-tag) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1024 pure #fff: color: var(--white) (.step-head .flow-num) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1304 pure #fff: color: var(--white) (.float-badge-price) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1378 pure #fff: color: var(--white) (.slide-caption) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1419 pure #fff: color: var(--white) (.slider-btn:hover) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1485 pure #fff: background: var(--white) (.ticker-client) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1510 pure #fff: background: var(--paper) (.faq-cta-banner-wrap) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1543 pure #fff: color: var(--white) (.btn-banner-call) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1574 pure #fff: background: var(--white) (.contact-studio-card) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1614 pure #fff: color: var(--white) (.studio-tag) | fix: Tint the base toward the anchor hue
+REFLEX 7b styles.css:1628 pure #fff: background: var(--white) (.studio-perks) | fix: Tint the base toward the anchor hue
+REFLEX 24b styles.css:586 margin-top: 14px (off the 4px scale) on .product .btn | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:857 padding: 4px 10px (off the 4px scale) on .flow-mood span | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:912 padding: 28px 18px (off the 4px scale) on .flow-mood | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:938 padding: 3px 10px (off the 4px scale) on .mood-badge | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:957 margin-bottom: 14px (off the 4px scale) on .flow-mood .mood-art | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:964 margin-bottom: 6px (off the 4px scale) on .flow-mood strong | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1039 padding: 4px 10px (off the 4px scale) on .step-pill | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1046 margin: 0 auto 18px (off the 4px scale) on .step-card .flow-art | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1067 margin: 0 0 10px (off the 4px scale) on .step-card h3 | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1075 margin: 0 0 18px (off the 4px scale) on .step-desc | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1082 padding: 14px 0 0 (off the 4px scale) on .step-perks | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1126 padding: 6px 14px (off the 4px scale) on .process-guarantees span | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1153 padding: 80px 0 90px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1165 padding: 6px 14px (off the 4px scale) on .hero-kicker | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1195 margin-bottom: 18px (off the 4px scale) on .hero h1 | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1209 gap: 14px (off the 4px scale) on .hero-cta | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1220 padding: 10px 18px (off the 4px scale) on .hero-catalog-btn | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1233 gap: 18px (off the 4px scale) on .hero-trust-bar | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1246 gap: 6px (off the 4px scale) on .hero-perk-item | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1274 padding: 12px 18px (off the 4px scale) on .fc-top-right | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1381 padding: 5px 12px (off the 4px scale) on .slide-caption | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1398 padding: 6px 14px (off the 4px scale) on .hero-slider-nav | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1462 padding: 18px 0 (off the 4px scale) on .logo-ticker | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1483 gap: 10px (off the 4px scale) on .ticker-client | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1484 padding: 8px 18px (off the 4px scale) on .ticker-client | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1509 padding: 10px 0 60px (off the 4px scale) on .faq-cta-banner-wrap | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1519 gap: 18px (off the 4px scale) on .faq-cta-banner | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1548 padding: 14px 36px (off the 4px scale) on .btn-banner-call | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1608 gap: 6px (off the 4px scale) on .studio-tag | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1609 padding: 6px 12px (off the 4px scale) on .studio-tag | fix: Use the 4px spacing scale
+REFLEX 24b styles.css:1627 gap: 14px (off the 4px scale) on .studio-perks | fix: Use the 4px spacing scale
+REFLEX 26b styles.css:1 no :disabled styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 44c index.html:1 [1440px] hero ends at 648px of a 900px screen | fix: Fill the first screen with the visual or the headline, not with copy
+REFLEX 59 index.html:1 [1440px] smallest gap between sections is 73px (gaps: 124, 73, 122, 193, 201, 205, 197, 193, 107, 156, 161) | fix: 120px or more between sections, by the --section-gap steps
+REFLEX 71 index.html:1 [1440px] heads nearer what precedes them than what they head: h2 "Pick a format. We " 16px over, 45px under; h2 "Ideas … | fix: At least twice the space above a head as below it
+REFLEX 77 index.html:1 [1440px] 1 thin section: section.proof-band (69% wide) | fix: Widen the body to ten of twelve columns and give it mass: a visual 300px tall or more, a set of three across, rows, or a statement (layout.md § 4 and § 5)
+REFLEX 80 index.html:1 [1440px] drawn illustration: div.faq-call (160x170, 13 shapes) | fix: A photograph (theme.mjs photos), the product built, or type at scale; SVG is for icons, logos and labelled charts or diagrams (imagery.md § 7)
+WARN 11 styles.css:123 the hover lift (translateY plus shadow) on 10 selectors (.btn-primary, .btn-ghost, .product) | fix: One signal per element; the same lift on every card is the template
+WARN 11 styles.css:126 hover scale(1.04) on 3 selectors | fix: One hover signal per element
+WARN 11 styles.css:126 image transforms on hover (.product:hover img) | fix: Imagery sits still; give the container the feedback
+WARN 11 styles.css:154 image transforms on hover (.work-card:hover img) | fix: Imagery sits still; give the container the feedback
+WARN 11 styles.css:538 hover scale(1.05) on 2 selectors | fix: One hover signal per element
+WARN 11 styles.css:1599 image transforms on hover (.contact-studio-card:hover .studio-photo img) | fix: Imagery sits still; give the container the feedback
+WARN 29 styles.css:65 glass panel: backdrop-filter blur over a translucent white on .header | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:83 glass panel: backdrop-filter blur over a translucent white on .mobile-menu | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:155 glass panel: backdrop-filter blur over a translucent white on .work-card figcaption | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:322 glass panel: backdrop-filter blur over a translucent white on .mbar | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:767 glass panel: backdrop-filter blur over a translucent black on .flow | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:916 glass panel: backdrop-filter blur over a translucent white on .flow-mood | fix: Solid or grained surface; elevation by lightness
+WARN 29 styles.css:1396 glass panel: backdrop-filter blur over a translucent white on .hero-slider-nav | fix: Solid or grained surface; elevation by lightness
+WARN 40 index.html:1 [1280px] contrast drops to 1.07:1 over the gradient behind button.btn.btn-primary "Get a free quote" | fix: Check the text where the gradient is darkest or lightest; give the label its own ground
+WARN 40 index.html:1 [1280px] contrast drops to 1.07:1 over the gradient behind small "Starting from" | fix: Check the text where the gradient is darkest or lightest; give the label its own ground
+WARN 40 index.html:1 [1280px] contrast drops to 1.07:1 over the gradient behind span "₹18.40" | fix: Check the text where the gradient is darkest or lightest; give the label its own ground
+WARN 40 index.html:1 [1280px] contrast drops to 1.07:1 over the gradient behind span.unit "/box" | fix: Check the text where the gradient is darkest or lightest; give the label its own ground
+WARN 40 index.html:1 [1280px] contrast drops to 1.00:1 over the gradient behind div.step-highlight-tag "Zero Risk" | fix: Check the text where the gradient is darkest or lightest; give the label its own ground
+WARN 46a index.html:173 metric "Trusted by 387+": verify the user supplied this number | fix: Confirm the metric or drop the slot
+WARN 58 index.html:1 760 visible words on the page (450 at most) | fix: Cut copy: one idea per screen, sections become objects
+WARN 58 index.html:72 hero paragraph runs 23 words | fix: One sentence, twelve words or fewer
+WARN 59 index.html:1 [1440px] 12 sections | fix: Six to nine sections a page, hero and footer included; merge or cut
+WARN F4 index.html:76 two filled buttons side by side in the hero: "Get a free quote" and "See our work" | fix: One filled primary per screen; the second action is outlined or a typographic link
+WARN F5 styles.css:103 icon-in-coloured-circle coin: .float-card .ico | fix: Drop the tinted coin; set the icon at text size in currentColor
+WARN F6 styles.css:167 numeric selector .stat strong at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums
+WARN F7 styles.css:65 the pill radius on 17 non-control selectors (.header, .nav a, .call-link, .float-card .ico) | fix: Pills are for controls; boxes and media take the card radius
+WARN F15 styles.css:1 3 different column gaps across multi-column sections (24px, 64px, 32px) | fix: One column gap for every multi-column section
+WARN F19 index.html:1 [1440px] 5 font weights in running use (400, 500, 600, 700, 900) | fix: Three weights at most, display and body together, picked as extremes
+WARN F20 index.html:1 [1440px] div.hero-trust-bar leaves one item alone on its last row (2 + 1) | fix: Change the count or the columns so the last row is not an orphan
+WARN F24 styles.css:202 a hairline border under a wide soft shadow on .form-card | fix: Commit to one: a defined edge, or elevation by shadow
+WARN render index.html:1 the shots show a fallback: fonts or stylesheets did not load (cdn.jsdelivr.net) | fix: Recapture when the host answers or the path is right; never review or sign off a fallback face

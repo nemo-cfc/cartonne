@@ -179,8 +179,10 @@ function initializeReference(){
   const priceEl = document.getElementById("live-slide-price");
 
   if (!slides.length) return;
+  const pauseBtn = document.getElementById("slider-pause");
   let current = 0;
   let timer = null;
+  let paused = false;
 
   function showSlide(index) {
     current = (index + slides.length) % slides.length;
@@ -200,13 +202,19 @@ function initializeReference(){
 
   function startAutoplay() {
     stopAutoplay();
-    if(matchMedia("(prefers-reduced-motion: reduce)").matches || document.hidden)return;
+    if(paused || matchMedia("(prefers-reduced-motion: reduce)").matches || document.hidden)return;
     timer = setInterval(nextSlide, 4200);
   }
   function stopAutoplay() {
     if (timer) clearInterval(timer);
   }
 
+  if (pauseBtn) pauseBtn.addEventListener("click", () => {
+    paused = !paused;
+    pauseBtn.setAttribute("aria-pressed", String(paused));
+    pauseBtn.textContent = paused ? "Play" : "Pause";
+    if (paused) stopAutoplay(); else startAutoplay();
+  });
   if (nextBtn) nextBtn.addEventListener("click", () => { nextSlide(); startAutoplay(); });
   if (prevBtn) prevBtn.addEventListener("click", () => { prevSlide(); startAutoplay(); });
   dots.forEach(dot => {
