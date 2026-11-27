@@ -103,7 +103,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 
 /* products */
-.products{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s200)}
+.products{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s200)}
 .product{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:var(--s75);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .product:hover{border-color:var(--beige);transform:translateY(-4px);box-shadow:0 16px 40px rgba(17,24,39,.10)}
 .product .img{border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:var(--cream)}
@@ -391,8 +391,6 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
   .section-head h2,.faq-side h2{font-size:32px;line-height:40px}
   .products{grid-template-columns:1fr 1fr;gap:var(--s300) var(--s100)}
   .product .img{aspect-ratio:4/5}
-  .product:last-child{grid-column:span 2}
-  .product:last-child .img{aspect-ratio:16/9}
   .product h3{font-size:16px;line-height:22px}
   .flow-art{width:160px;height:160px}
   .flow-art svg{width:108px;height:108px}
