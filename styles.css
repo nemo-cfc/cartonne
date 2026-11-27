@@ -1690,6 +1690,6 @@ input,select,textarea{font-size:16px!important;max-width:100%}
 }
 
 /* Client logo pills (monochrome logos in assets/clients) */
-.ticker-client.ticker-logo{height:64px;padding:0 28px;justify-content:center}
-.ticker-logo img{display:block;width:auto;max-width:none;opacity:.72;transition:opacity .3s var(--ease)}
+.ticker-client.ticker-logo{flex:none;box-sizing:border-box;width:180px;height:72px;padding:0 14px;justify-content:center;overflow:hidden}
+.ticker-logo img{display:block;width:auto!important;max-width:152px!important;max-height:50px!important;object-fit:contain;opacity:.72;transition:opacity .3s var(--ease)}
 .ticker-logo:hover img{opacity:1}
