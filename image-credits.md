@@ -24,3 +24,7 @@ Added in v2:
 
 Note: `mailer-stack.jpg` shows another brand's printed wordmark on the lid. Swap it before any public use.
 
+
+## Client logos
+
+`assets/clients/` holds monochrome versions of client logos taken from each client's own website (rainbowfabart.com, miraexim.com, torani.in, sbil.biz, decazone.in, nutragenixsciences.com, lillbud.com). Confirm each client is happy to be listed before launch.

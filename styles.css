@@ -1688,3 +1688,8 @@ input,select,textarea{font-size:16px!important;max-width:100%}
  .s-dot,.dots button{min-width:24px;min-height:24px;border:8px solid transparent;background-clip:content-box}
  .flow-mood{min-width:0}
 }
+
+/* Client logo pills (monochrome logos in assets/clients) */
+.ticker-client.ticker-logo{height:64px;padding:0 28px;justify-content:center}
+.ticker-logo img{display:block;width:auto;max-width:none;opacity:.72;transition:opacity .3s var(--ease)}
+.ticker-logo:hover img{opacity:1}
