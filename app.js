@@ -1,3 +1,4 @@
+document.documentElement.classList.add("js");
 function initializeReference(){
 
 (function(){
